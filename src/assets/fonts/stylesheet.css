@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'MazdaType TH';
+    src: url('MazdaTypeTH-MediumItalic.woff2') format('woff2'),
+        url('MazdaTypeTH-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazdaType TH';
+    src: url('MazdaTypeTH-MediumItalic.woff2') format('woff2'),
+        url('MazdaTypeTH-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazdaType TH';
+    src: url('MazdaTypeTH-Regular.woff2') format('woff2'),
+        url('MazdaTypeTH-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazdaType TH';
+    src: url('MazdaTypeTH-Italic.woff2') format('woff2'),
+        url('MazdaTypeTH-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazdaType TH';
+    src: url('MazdaTypeTH-Bold.woff2') format('woff2'),
+        url('MazdaTypeTH-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazdaType TH';
+    src: url('MazdaTypeTH-BoldItalic.woff2') format('woff2'),
+        url('MazdaTypeTH-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazdaType TH';
+    src: url('MazdaTypeTH-BoldItalic.woff2') format('woff2'),
+        url('MazdaTypeTH-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazdaType TH';
+    src: url('MazdaTypeTH-Regular.woff2') format('woff2'),
+        url('MazdaTypeTH-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazdaType TH';
+    src: url('MazdaTypeTH-Medium.woff2') format('woff2'),
+        url('MazdaTypeTH-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazdaType TH';
+    src: url('MazdaTypeTH-Medium.woff2') format('woff2'),
+        url('MazdaTypeTH-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazdaType TH';
+    src: url('MazdaTypeTH-Italic.woff2') format('woff2'),
+        url('MazdaTypeTH-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
