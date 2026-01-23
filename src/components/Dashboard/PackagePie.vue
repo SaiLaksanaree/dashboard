@@ -2,16 +2,7 @@
 <template>
   <div class="card">
     <div class="label">ยอดจองสิทธิ์ตามข้อเสนอพิเศษ</div>
-
-    <div class="chart-container">
-      <!-- 🔹 ถ้าไม่มีข้อมูล -->
-      <div v-if="!hasData" class="no-data-center">
-        ไม่มีข้อมูล
-      </div>
-
-      <!-- 🔹 ถ้ามีข้อมูล -->
-      <Chart v-else :option="option" height="280px" :barWidth="25" :autoHover="autoHover" :hoverEveryMs="6000" />
-    </div>
+    <Chart :option="option" height="280px" :barWidth="25" :autoHover="autoHover" :hoverEveryMs="6000" />
   </div>
 </template>
 
@@ -57,8 +48,6 @@ function getColor(index) {
   const colors = ['#a6a6a6', '#c00000', '#414550', '#a27f61', '#6f9fbf', '#8561c5']
   return colors[index % colors.length]
 }
-
-const hasData = computed(() => props.items && props.items.length > 0)
 
 const option = computed(() => {
   const items = props.items ?? []
@@ -138,26 +127,5 @@ const option = computed(() => {
 .label {
   font-size: 12px;
   margin-bottom: 20px;
-}
-
-.chart-container {
-  position: relative;
-  width: 100%;
-  height: 280px;
-  /* ต้องเท่ากับความสูง chart */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.no-data-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #999;
-  font-size: 14px;
-  text-align: center;
-  pointer-events: none;
 }
 </style>

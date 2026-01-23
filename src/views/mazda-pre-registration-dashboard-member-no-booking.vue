@@ -36,25 +36,39 @@ import DataTableForNoBooking from '@/components/Dashboard/DataTableForNoBooking.
 import DetailModalForNoBooking from '@/components/Dashboard/DetailModalForNoBooking.vue'
 import FiltersMember from '@/components/Dashboard/FiltersMember.vue'
 
-const API_BASE = import.meta.env.VITE_API_URL
-const API_KEY = import.meta.env.VITE_BEARER_TOKEN
-const ENDPOINT_PREBOOKINGS = '/no-member'
 const todayStr = () => dayjs().format('YYYY-MM-DD')
 
-const api = axios.create({
-  baseURL: API_BASE
-})
-
-api.interceptors.request.use((config) => {
-  if (!config.method) config.method = 'get'
-  config.headers = config.headers || {}
-  if (API_KEY) {
-    config.headers.Authorization = `Bearer ${API_KEY}`
-  } else {
-    console.warn('⚠️ API_KEY is undefined. If the server requires Bearer auth, this will fail with 401.')
+// Static mock data
+const mockData = {
+  noMember: {
+    data: [
+      {
+        "RegisterDate": "2025-01-15T12:00:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "ประยุทธ์",
+        "LastName": "สมบูรณ์",
+        "Email": "prayuth@email.com",
+        "Phone": "086-789-0123"
+      },
+      {
+        "RegisterDate": "2025-01-14T15:30:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "มาลี",
+        "LastName": "ดีใจ",
+        "Email": "malee@email.com",
+        "Phone": "087-890-1234"
+      },
+      {
+        "RegisterDate": "2025-01-13T11:15:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "สมศักดิ์",
+        "LastName": "เก่งกาจ",
+        "Email": "somsak@email.com",
+        "Phone": "088-901-2345"
+      }
+    ]
   }
-  return config
-})
+};
 
 function mapApiRecord(r) {
   return {
@@ -83,7 +97,7 @@ function pickArrayFromPayload(payload) {
 }
 
 function toBase(payload) {
-  const arr = pickArrayFromPayload(payload)
+  const arr = Array.isArray(payload) ? payload : (payload?.data || [])
   return arr.map(mapApiRecord)
 }
 
@@ -152,33 +166,14 @@ export default {
     // --------- FETCH API ---------
     async function fetchPrebookings({ startOverride, endOverride } = {}) {
       try {
-        if (!API_BASE) throw new Error('VITE_API_URL is not set')
+        // Simulate API delay
+        await new Promise(resolve => setTimeout(resolve, 500))
 
-        let start = startOverride
-          ?? (filters.value.start && dayjs(filters.value.start).isValid()
-            ? dayjs(filters.value.start).format('YYYY-MM-DD')
-            : '2025-01-01')
-
-        let end = endOverride
-          ?? (filters.value.end && dayjs(filters.value.end).isValid()
-            ? dayjs(filters.value.end).format('YYYY-MM-DD')
-            : todayStr())
-
-        if (dayjs(start).isSame(dayjs(end), 'day')) {
-          end = dayjs(end).add(1, 'day').format('YYYY-MM-DD')
-        }
-
-        const res = await api.get(ENDPOINT_PREBOOKINGS, { params: { start, end } })
-        raw.value = toBase(res.data)
+        // Use static mock data
+        raw.value = toBase(mockData.noMember)
       } catch (e) {
         console.group('%c[API] Fetch ERROR', 'color:#d32f2f;font-weight:700')
-        if (e?.response) {
-          console.error('HTTP Error:', e.response.status, e.response.data)
-        } else if (e?.request) {
-          console.error('Network/CORS Error. No response received.', e.message)
-        } else {
-          console.error('Client Error:', e.message)
-        }
+        console.error('Mock Data Error:', e.message)
         console.groupEnd()
         error.value = e?.message || 'Fetch failed'
       } finally {

@@ -2,14 +2,7 @@
 <template>
   <div class="card">
     <div class="label">ยอดจองสิทธิ์ตามสีภายนอก</div>
-
-    <div class="chart-container">
-      <div v-if="!hasData" class="no-data-center">
-        ไม่มีข้อมูล
-      </div>
-
-      <Chart v-else :option="option" height="280px" :autoHover="autoHover" :hoverEveryMs="6000" />
-    </div>
+    <Chart :option="option" height="280px" :autoHover="autoHover" :hoverEveryMs="6000" />
   </div>
 </template>
 
@@ -32,13 +25,6 @@ const props = defineProps({
     type: Boolean,
     default: false
   }
-})
-
-const hasData = computed(() => {
-  return Array.isArray(props.categories) &&
-    props.categories.length > 0 &&
-    Array.isArray(props.series) &&
-    props.series.length > 0
 })
 
 const pieItems = computed(() => {
@@ -163,25 +149,5 @@ const option = computed(() => {
 .label {
   font-size: 12px;
   margin-bottom: 20px;
-}
-
-.chart-container {
-  position: relative;
-  width: 100%;
-  height: 280px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.no-data-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #999;
-  font-size: 14px;
-  text-align: center;
-  pointer-events: none;
 }
 </style>

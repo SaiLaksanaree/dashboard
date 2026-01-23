@@ -22,9 +22,30 @@
 import Textinput from "@/components/Textinput";
 import { useField, useForm } from "vee-validate";
 import * as yup from "yup";
-
 import { useRouter } from "vue-router";
 import { useToast } from "vue-toastification";
+
+// Static mock data
+const mockData = {
+  auth: {
+    login: {
+      success: {
+        data: {
+          id: "user123",
+          email: "admin@mazda.com",
+          firstName: "Admin",
+          lastName: "User",
+          role: "admin",
+          token: "mock_token",
+          refreshToken: "mock_refresh_token"
+        }
+      },
+      error: {
+        message: "Invalid credentials"
+      }
+    }
+  }
+};
 export default {
   components: {
     Textinput,
@@ -60,22 +81,23 @@ export default {
     const { value: password, errorMessage: passwordError } = useField("password");
     const onSubmit = handleSubmit(async (values) => {
       try {
-        const response = await fetch(
-          import.meta.env.VITE_APP_API_URL + "/auth/login",
-          {
-            method: "POST",
-            headers: {
-              'Authorization': 'Bearer ' + import.meta.env.VITE_BEARER_TOKEN,
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              email: values.email,
-              password: values.password,
-            }),
-          }
-        );
-        if (response.status === 201) {
-          const data = await response.json();
+        // Simulate API delay
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // Mock login validation
+        const validCredentials = [
+          { email: "admin@mazda.com", password: "password123" },
+          { email: "user@mazda.com", password: "password123" },
+          { email: values.email, password: values.password } // Allow any email/password for demo
+        ];
+
+        const isValidLogin = validCredentials.some(cred => 
+          cred.email === values.email && cred.password === values.password
+        ) || values.password.length >= 8; // Simple validation for demo
+
+        if (isValidLogin) {
+          // Use static mock success response
+          const data = mockData.auth.login.success.data;
 
           // Store user info in localStorage
           localStorage.setItem("activeUser", JSON.stringify(data));
@@ -84,21 +106,10 @@ export default {
           router.push("/app/mazda-pre-registration-dashboard");
           toast.success("Login successfully", {
             timeout: 2000,
-          });กแ
-        } else if (response.status === 400) {
-          const errorData = await response.json();
-          if (errorData.message && Array.isArray(errorData.message)) {
-            toast.error(errorData.message[0] || "Bad Request", {
-              timeout: 2000,
-            });
-          } else {
-            toast.error("Bad Request", {
-              timeout: 2000,
-            });
-          }
-        } else if (response.status === 401) {
-          const errorData = await response.json();
-          toast.error(errorData.message || "Invalid credentials", {
+          });
+        } else {
+          // Use static mock error response
+          toast.error(mockData.auth.login.error.message || "Invalid credentials", {
             timeout: 2000,
           });
         }

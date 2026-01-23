@@ -1,0 +1,1155 @@
+{
+  "auth": {
+    "login": {
+      "success": {
+        "status": 201,
+        "data": {
+          "id": "user123",
+          "email": "admin@mazda.com",
+          "firstName": "Admin",
+          "lastName": "User",
+          "role": "admin",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+          "refreshToken": "refresh_token_here",
+          "permissions": ["dashboard:read", "export:data"]
+        }
+      },
+      "error": {
+        "status": 401,
+        "message": "Invalid credentials"
+      }
+    }
+  },
+  "preRegistration": {
+    "data": [
+      {
+        "ID": "PRE001",
+        "BookingCreated": "2025-01-23T10:30:00Z",
+        "memberDisplayId": "MZ001234",
+        "Newsletter": "On",
+        "ZoneSale": "Central",
+        "Dealer": "Mazda Bangkok",
+        "DealerCode": "MBK001",
+        "Color": "Soul Red Crystal",
+        "InteriorOption": "Black Leather",
+        "PackageName": "Premium Package",
+        "Model": "CX-5",
+        "Grade": "2.5 Turbo AWD",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "CX-5 Premium Experience",
+        "Detail": "Complete test drive package with premium features",
+        "associatedPerson": {
+          "firstName": "สมชาย",
+          "lastName": "ใจดี",
+          "email": "somchai@email.com",
+          "phone": "081-234-5678"
+        },
+        "packagedetail": [
+          {
+            "Title": "Premium Package",
+            "Subtitle": "Full Feature Experience",
+            "Detail": "Includes all premium features and accessories"
+          }
+        ]
+      },
+      {
+        "ID": "PRE002",
+        "BookingCreated": "2025-01-23T14:20:00Z",
+        "memberDisplayId": "MZ001235",
+        "Newsletter": "Off",
+        "ZoneSale": "Northern",
+        "Dealer": "Mazda Chiang Mai",
+        "DealerCode": "MCM002",
+        "Color": "Machine Gray Metallic",
+        "InteriorOption": "Parchment Leather",
+        "PackageName": "Standard Package",
+        "Model": "Mazda3",
+        "Grade": "2.0 SP Hatchback",
+        "Status": "Pending",
+        "Title": "Test Drive Booking",
+        "Subtitle": "Mazda3 Standard Experience",
+        "Detail": "Standard test drive package",
+        "associatedPerson": {
+          "firstName": "สุดา",
+          "lastName": "รักดี",
+          "email": "suda@email.com",
+          "phone": "082-345-6789"
+        },
+        "packagedetail": [
+          {
+            "Title": "Standard Package",
+            "Subtitle": "Essential Features",
+            "Detail": "Basic features and standard accessories"
+          }
+        ]
+      },
+      {
+        "ID": "PRE003",
+        "BookingCreated": "2025-01-22T09:15:00Z",
+        "memberDisplayId": "MZ001236",
+        "Newsletter": "On",
+        "ZoneSale": "Eastern",
+        "Dealer": "Mazda Pattaya",
+        "DealerCode": "MPT003",
+        "Color": "Snowflake White Pearl",
+        "InteriorOption": "Black Cloth",
+        "PackageName": "Sport Package",
+        "Model": "CX-30",
+        "Grade": "2.0 SP AWD",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "CX-30 Sport Experience",
+        "Detail": "Sport package with enhanced performance features",
+        "associatedPerson": {
+          "firstName": "วิชัย",
+          "lastName": "มั่นคง",
+          "email": "wichai@email.com",
+          "phone": "083-456-7890"
+        },
+        "packagedetail": [
+          {
+            "Title": "Sport Package",
+            "Subtitle": "Performance Enhanced",
+            "Detail": "Sport tuned suspension and performance accessories"
+          }
+        ]
+      },
+      {
+        "ID": "PRE004",
+        "BookingCreated": "2025-01-22T16:45:00Z",
+        "memberDisplayId": "MZ001237",
+        "Newsletter": "On",
+        "ZoneSale": "Southern",
+        "Dealer": "Mazda Phuket",
+        "DealerCode": "MPK004",
+        "Color": "Deep Crystal Blue",
+        "InteriorOption": "Tan Leather",
+        "PackageName": "Luxury Package",
+        "Model": "CX-9",
+        "Grade": "2.5 Turbo AWD Signature",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "CX-9 Luxury Experience",
+        "Detail": "Full luxury package with premium amenities",
+        "associatedPerson": {
+          "firstName": "นิรันดร์",
+          "lastName": "สุขใส",
+          "email": "niran@email.com",
+          "phone": "084-567-8901"
+        },
+        "packagedetail": [
+          {
+            "Title": "Luxury Package",
+            "Subtitle": "Ultimate Comfort",
+            "Detail": "Premium leather, advanced safety, and luxury amenities"
+          }
+        ]
+      },
+      {
+        "ID": "PRE005",
+        "BookingCreated": "2025-01-21T11:30:00Z",
+        "memberDisplayId": "MZ001238",
+        "Newsletter": "Off",
+        "ZoneSale": "Western",
+        "Dealer": "Mazda Kanchanaburi",
+        "DealerCode": "MKB005",
+        "Color": "Jet Black Mica",
+        "InteriorOption": "Red Leather",
+        "PackageName": "Premium Package",
+        "Model": "MX-5",
+        "Grade": "2.0 RF GT",
+        "Status": "Pending",
+        "Title": "Test Drive Booking",
+        "Subtitle": "MX-5 Premium Experience",
+        "Detail": "Premium roadster experience package",
+        "associatedPerson": {
+          "firstName": "อนุชา",
+          "lastName": "เจริญ",
+          "email": "anucha@email.com",
+          "phone": "085-678-9012"
+        },
+        "packagedetail": [
+          {
+            "Title": "Premium Package",
+            "Subtitle": "Roadster Excellence",
+            "Detail": "Premium roadster features and performance enhancements"
+          }
+        ]
+      },
+      {
+        "ID": "PRE006",
+        "BookingCreated": "2025-01-21T08:45:00Z",
+        "memberDisplayId": "MZ001239",
+        "Newsletter": "On",
+        "ZoneSale": "Central",
+        "Dealer": "Mazda Siam Paragon",
+        "DealerCode": "MSP006",
+        "Color": "Polymetal Gray Metallic",
+        "InteriorOption": "White Leather",
+        "PackageName": "Signature Package",
+        "Model": "CX-60",
+        "Grade": "3.3 Turbo PHEV AWD",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "CX-60 Hybrid Experience",
+        "Detail": "Latest hybrid technology with premium comfort",
+        "associatedPerson": {
+          "firstName": "ปรีชา",
+          "lastName": "วิทยากร",
+          "email": "preecha@email.com",
+          "phone": "086-123-4567"
+        },
+        "packagedetail": [
+          {
+            "Title": "Signature Package",
+            "Subtitle": "Hybrid Excellence",
+            "Detail": "Advanced hybrid powertrain with luxury appointments"
+          }
+        ]
+      },
+      {
+        "ID": "PRE007",
+        "BookingCreated": "2025-01-20T15:20:00Z",
+        "memberDisplayId": "MZ001240",
+        "Newsletter": "Off",
+        "ZoneSale": "Northern",
+        "Dealer": "Mazda Chiang Rai",
+        "DealerCode": "MCR007",
+        "Color": "Ceramic Metallic",
+        "InteriorOption": "Burgundy Leather",
+        "PackageName": "Sport Package",
+        "Model": "Mazda2",
+        "Grade": "1.3 Sports High Connect",
+        "Status": "Pending",
+        "Title": "Test Drive Booking",
+        "Subtitle": "Mazda2 Compact Experience",
+        "Detail": "Efficient and stylish city driving experience",
+        "associatedPerson": {
+          "firstName": "มนัสวี",
+          "lastName": "สุขสันต์",
+          "email": "manaswee@email.com",
+          "phone": "087-234-5678"
+        },
+        "packagedetail": [
+          {
+            "Title": "Sport Package",
+            "Subtitle": "Urban Agility",
+            "Detail": "Perfect for city driving with sporty enhancements"
+          }
+        ]
+      },
+      {
+        "ID": "PRE008",
+        "BookingCreated": "2025-01-20T12:10:00Z",
+        "memberDisplayId": "MZ001241",
+        "Newsletter": "On",
+        "ZoneSale": "Eastern",
+        "Dealer": "Mazda Rayong",
+        "DealerCode": "MRY008",
+        "Color": "Zircon Sand Metallic",
+        "InteriorOption": "Beige Cloth",
+        "PackageName": "Standard Package",
+        "Model": "BT-50",
+        "Grade": "3.0 SP Double Cab Hi-Racer",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "BT-50 Pickup Experience",
+        "Detail": "Rugged pickup truck for work and adventure",
+        "associatedPerson": {
+          "firstName": "สุรชัย",
+          "lastName": "แกล้วกล้า",
+          "email": "surachai@email.com",
+          "phone": "088-345-6789"
+        },
+        "packagedetail": [
+          {
+            "Title": "Standard Package",
+            "Subtitle": "Tough & Reliable",
+            "Detail": "Built for durability and performance"
+          }
+        ]
+      },
+      {
+        "ID": "PRE009",
+        "BookingCreated": "2025-01-19T17:30:00Z",
+        "memberDisplayId": "MZ001242",
+        "Newsletter": "On",
+        "ZoneSale": "Southern",
+        "Dealer": "Mazda Hat Yai",
+        "DealerCode": "MHY009",
+        "Color": "Eternal Blue Mica",
+        "InteriorOption": "Gray Leather",
+        "PackageName": "Premium Package",
+        "Model": "CX-8",
+        "Grade": "2.5 Turbo AWD Exclusive",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "CX-8 Family Experience",
+        "Detail": "Spacious 7-seater SUV for family adventures",
+        "associatedPerson": {
+          "firstName": "วราภรณ์",
+          "lastName": "สุขเกษม",
+          "email": "waraporn@email.com",
+          "phone": "089-456-7890"
+        },
+        "packagedetail": [
+          {
+            "Title": "Premium Package",
+            "Subtitle": "Family Luxury",
+            "Detail": "Premium 7-seater with advanced safety features"
+          }
+        ]
+      },
+      {
+        "ID": "PRE010",
+        "BookingCreated": "2025-01-19T13:45:00Z",
+        "memberDisplayId": "MZ001243",
+        "Newsletter": "Off",
+        "ZoneSale": "Western",
+        "Dealer": "Mazda Ratchaburi",
+        "DealerCode": "MRC010",
+        "Color": "Arctic White",
+        "InteriorOption": "Charcoal Cloth",
+        "PackageName": "Standard Package",
+        "Model": "Mazda3",
+        "Grade": "2.0 C Sedan",
+        "Status": "Pending",
+        "Title": "Test Drive Booking",
+        "Subtitle": "Mazda3 Sedan Experience",
+        "Detail": "Elegant sedan with premium design",
+        "associatedPerson": {
+          "firstName": "ธนากร",
+          "lastName": "มั่งคั่ง",
+          "email": "thanakorn@email.com",
+          "phone": "090-567-8901"
+        },
+        "packagedetail": [
+          {
+            "Title": "Standard Package",
+            "Subtitle": "Elegant Design",
+            "Detail": "Sophisticated sedan for professional use"
+          }
+        ]
+      },
+      {
+        "ID": "PRE011",
+        "BookingCreated": "2025-01-18T09:20:00Z",
+        "memberDisplayId": "MZ001244",
+        "Newsletter": "On",
+        "ZoneSale": "Central",
+        "Dealer": "Mazda Ladprao",
+        "DealerCode": "MLP011",
+        "Color": "Sonic Silver Metallic",
+        "InteriorOption": "Black Leather",
+        "PackageName": "Luxury Package",
+        "Model": "CX-5",
+        "Grade": "2.0 C AWD",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "CX-5 AWD Experience",
+        "Detail": "All-wheel drive capability with luxury features",
+        "associatedPerson": {
+          "firstName": "สิริพร",
+          "lastName": "เจริญรุ่ง",
+          "email": "siriporn@email.com",
+          "phone": "091-678-9012"
+        },
+        "packagedetail": [
+          {
+            "Title": "Luxury Package",
+            "Subtitle": "AWD Performance",
+            "Detail": "Superior traction and control in all conditions"
+          }
+        ]
+      },
+      {
+        "ID": "PRE012",
+        "BookingCreated": "2025-01-18T14:15:00Z",
+        "memberDisplayId": "MZ001245",
+        "Newsletter": "On",
+        "ZoneSale": "Northern",
+        "Dealer": "Mazda Lampang",
+        "DealerCode": "MLP012",
+        "Color": "Titanium Flash Mica",
+        "InteriorOption": "Brown Leather",
+        "PackageName": "Sport Package",
+        "Model": "CX-30",
+        "Grade": "2.0 SP",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "CX-30 Urban Experience",
+        "Detail": "Compact SUV perfect for urban lifestyle",
+        "associatedPerson": {
+          "firstName": "ชัยวัฒน์",
+          "lastName": "ประสบสุข",
+          "email": "chaiwat@email.com",
+          "phone": "092-789-0123"
+        },
+        "packagedetail": [
+          {
+            "Title": "Sport Package",
+            "Subtitle": "Urban Mobility",
+            "Detail": "Agile handling for city and highway driving"
+          }
+        ]
+      },
+      {
+        "ID": "PRE013",
+        "BookingCreated": "2025-01-17T11:40:00Z",
+        "memberDisplayId": "MZ001246",
+        "Newsletter": "Off",
+        "ZoneSale": "Eastern",
+        "Dealer": "Mazda Chonburi",
+        "DealerCode": "MCB013",
+        "Color": "Meteor Gray Mica",
+        "InteriorOption": "Ivory Leather",
+        "PackageName": "Premium Package",
+        "Model": "MX-30",
+        "Grade": "Electric",
+        "Status": "Pending",
+        "Title": "Test Drive Booking",
+        "Subtitle": "MX-30 Electric Experience",
+        "Detail": "Zero-emission electric vehicle experience",
+        "associatedPerson": {
+          "firstName": "อรุณี",
+          "lastName": "สีเขียว",
+          "email": "arunee@email.com",
+          "phone": "093-890-1234"
+        },
+        "packagedetail": [
+          {
+            "Title": "Premium Package",
+            "Subtitle": "Electric Future",
+            "Detail": "Experience the future of sustainable mobility"
+          }
+        ]
+      },
+      {
+        "ID": "PRE014",
+        "BookingCreated": "2025-01-17T16:25:00Z",
+        "memberDisplayId": "MZ001247",
+        "Newsletter": "On",
+        "ZoneSale": "Southern",
+        "Dealer": "Mazda Surat Thani",
+        "DealerCode": "MST014",
+        "Color": "Rhodium White Premium Metallic",
+        "InteriorOption": "Nappa Leather Black",
+        "PackageName": "Signature Package",
+        "Model": "CX-90",
+        "Grade": "3.3 Turbo PHEV AWD",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "CX-90 Flagship Experience",
+        "Detail": "Flagship 3-row SUV with hybrid technology",
+        "associatedPerson": {
+          "firstName": "ประยูร",
+          "lastName": "มหาชัย",
+          "email": "prayoon@email.com",
+          "phone": "094-901-2345"
+        },
+        "packagedetail": [
+          {
+            "Title": "Signature Package",
+            "Subtitle": "Flagship Excellence",
+            "Detail": "Ultimate luxury and performance in a 3-row SUV"
+          }
+        ]
+      },
+      {
+        "ID": "PRE015",
+        "BookingCreated": "2025-01-16T10:50:00Z",
+        "memberDisplayId": "MZ001248",
+        "Newsletter": "On",
+        "ZoneSale": "Western",
+        "Dealer": "Mazda Phetchaburi",
+        "DealerCode": "MPB015",
+        "Color": "Crystal White Pearl Mica",
+        "InteriorOption": "Terracotta Leather",
+        "PackageName": "Premium Package",
+        "Model": "Mazda6",
+        "Grade": "2.5 Turbo Signature",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "Mazda6 Executive Experience",
+        "Detail": "Executive sedan with turbocharged performance",
+        "associatedPerson": {
+          "firstName": "กมลชนก",
+          "lastName": "รุ่งเรือง",
+          "email": "kamonchonok@email.com",
+          "phone": "095-012-3456"
+        },
+        "packagedetail": [
+          {
+            "Title": "Premium Package",
+            "Subtitle": "Executive Performance",
+            "Detail": "Turbocharged power with executive refinement"
+          }
+        ]
+      },
+      {
+        "ID": "PRE016",
+        "BookingCreated": "2025-01-16T15:35:00Z",
+        "memberDisplayId": "MZ001249",
+        "Newsletter": "Off",
+        "ZoneSale": "Central",
+        "Dealer": "Mazda Ramkhamhaeng",
+        "DealerCode": "MRK016",
+        "Color": "Artisan Red Premium",
+        "InteriorOption": "Caturra Brown Nappa Leather",
+        "PackageName": "Luxury Package",
+        "Model": "CX-5",
+        "Grade": "2.5 Turbo Signature AWD",
+        "Status": "Pending",
+        "Title": "Test Drive Booking",
+        "Subtitle": "CX-5 Signature Experience",
+        "Detail": "Top-tier CX-5 with signature luxury features",
+        "associatedPerson": {
+          "firstName": "วิทยา",
+          "lastName": "ปัญญาดี",
+          "email": "witaya@email.com",
+          "phone": "096-123-4567"
+        },
+        "packagedetail": [
+          {
+            "Title": "Luxury Package",
+            "Subtitle": "Signature Luxury",
+            "Detail": "Premium materials and advanced technology"
+          }
+        ]
+      },
+      {
+        "ID": "PRE017",
+        "BookingCreated": "2025-01-15T12:20:00Z",
+        "memberDisplayId": "MZ001250",
+        "Newsletter": "On",
+        "ZoneSale": "Northern",
+        "Dealer": "Mazda Phitsanulok",
+        "DealerCode": "MPS017",
+        "Color": "Platinum Quartz Metallic",
+        "InteriorOption": "Pure White Leather",
+        "PackageName": "Sport Package",
+        "Model": "Mazda3",
+        "Grade": "2.0 Turbo Hatchback",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "Mazda3 Turbo Experience",
+        "Detail": "High-performance turbocharged hatchback",
+        "associatedPerson": {
+          "firstName": "นันทนา",
+          "lastName": "สุขสวัสดิ์",
+          "email": "nantana@email.com",
+          "phone": "097-234-5678"
+        },
+        "packagedetail": [
+          {
+            "Title": "Sport Package",
+            "Subtitle": "Turbo Performance",
+            "Detail": "Exhilarating turbocharged driving experience"
+          }
+        ]
+      },
+      {
+        "ID": "PRE018",
+        "BookingCreated": "2025-01-15T08:10:00Z",
+        "memberDisplayId": "MZ001251",
+        "Newsletter": "On",
+        "ZoneSale": "Eastern",
+        "Dealer": "Mazda Trat",
+        "DealerCode": "MTR018",
+        "Color": "Magma Red Metallic",
+        "InteriorOption": "Ebony Leather",
+        "PackageName": "Standard Package",
+        "Model": "CX-30",
+        "Grade": "2.0 C",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "CX-30 Essential Experience",
+        "Detail": "Essential features with Mazda quality",
+        "associatedPerson": {
+          "firstName": "สุพจน์",
+          "lastName": "เก่งการ",
+          "email": "supot@email.com",
+          "phone": "098-345-6789"
+        },
+        "packagedetail": [
+          {
+            "Title": "Standard Package",
+            "Subtitle": "Essential Quality",
+            "Detail": "Core Mazda experience with essential features"
+          }
+        ]
+      },
+      {
+        "ID": "PRE019",
+        "BookingCreated": "2025-01-14T19:45:00Z",
+        "memberDisplayId": "MZ001252",
+        "Newsletter": "Off",
+        "ZoneSale": "Southern",
+        "Dealer": "Mazda Krabi",
+        "DealerCode": "MKR019",
+        "Color": "Snowflake White Pearl",
+        "InteriorOption": "Stone Leather",
+        "PackageName": "Premium Package",
+        "Model": "BT-50",
+        "Grade": "1.9 SP Double Cab",
+        "Status": "Pending",
+        "Title": "Test Drive Booking",
+        "Subtitle": "BT-50 Adventure Experience",
+        "Detail": "Adventure-ready pickup for outdoor enthusiasts",
+        "associatedPerson": {
+          "firstName": "จิรายุ",
+          "lastName": "ผจญภัย",
+          "email": "jirayu@email.com",
+          "phone": "099-456-7890"
+        },
+        "packagedetail": [
+          {
+            "Title": "Premium Package",
+            "Subtitle": "Adventure Ready",
+            "Detail": "Built for adventure with premium comfort"
+          }
+        ]
+      },
+      {
+        "ID": "PRE020",
+        "BookingCreated": "2025-01-14T07:30:00Z",
+        "memberDisplayId": "MZ001253",
+        "Newsletter": "On",
+        "ZoneSale": "Western",
+        "Dealer": "Mazda Prachuap Khiri Khan",
+        "DealerCode": "MPK020",
+        "Color": "Brilliant Black",
+        "InteriorOption": "Garnet Red Leather",
+        "PackageName": "Signature Package",
+        "Model": "MX-5",
+        "Grade": "2.0 RF Club",
+        "Status": "Confirmed",
+        "Title": "Test Drive Booking",
+        "Subtitle": "MX-5 Club Experience",
+        "Detail": "Pure driving pleasure with club-spec features",
+        "associatedPerson": {
+          "firstName": "ธีรพงษ์",
+          "lastName": "ใจรักษ์",
+          "email": "teerapong@email.com",
+          "phone": "080-567-8901"
+        },
+        "packagedetail": [
+          {
+            "Title": "Signature Package",
+            "Subtitle": "Pure Driving Joy",
+            "Detail": "Ultimate roadster experience with club features"
+          }
+        ]
+      }
+    ]
+  },
+  "memberInfo": {
+    "total": {
+      "2024-08": 28,
+      "2024-09": 35,
+      "2024-10": 45,
+      "2024-11": 67,
+      "2024-12": 89,
+      "2025-01": 123
+    },
+    "lineConnected": {
+      "2024-08": 18,
+      "2024-09": 25,
+      "2024-10": 32,
+      "2024-11": 48,
+      "2024-12": 65,
+      "2025-01": 87
+    },
+    "data": [
+      {
+        "RegisterDate": "2025-01-23T08:30:00Z",
+        "MemberDisplayId": "MZ001234",
+        "FirstName": "สมชาย",
+        "LastName": "ใจดี",
+        "Email": "somchai@email.com",
+        "Phone": "081-234-5678",
+        "Newsletter": "On",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-22T10:15:00Z",
+        "MemberDisplayId": "MZ001235",
+        "FirstName": "สุดา",
+        "LastName": "รักดี",
+        "Email": "suda@email.com",
+        "Phone": "082-345-6789",
+        "Newsletter": "Off",
+        "LineConnected": "No"
+      },
+      {
+        "RegisterDate": "2025-01-21T14:20:00Z",
+        "MemberDisplayId": "MZ001236",
+        "FirstName": "วิชัย",
+        "LastName": "มั่นคง",
+        "Email": "wichai@email.com",
+        "Phone": "083-456-7890",
+        "Newsletter": "On",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-20T09:45:00Z",
+        "MemberDisplayId": "MZ001237",
+        "FirstName": "นิรันดร์",
+        "LastName": "สุขใส",
+        "Email": "niran@email.com",
+        "Phone": "084-567-8901",
+        "Newsletter": "On",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-19T16:30:00Z",
+        "MemberDisplayId": "MZ001238",
+        "FirstName": "อนุชา",
+        "LastName": "เจริญ",
+        "Email": "anucha@email.com",
+        "Phone": "085-678-9012",
+        "Newsletter": "Off",
+        "LineConnected": "No"
+      },
+      {
+        "RegisterDate": "2025-01-18T11:20:00Z",
+        "MemberDisplayId": "MZ001239",
+        "FirstName": "ปรีชา",
+        "LastName": "วิทยากร",
+        "Email": "preecha@email.com",
+        "Phone": "086-123-4567",
+        "Newsletter": "On",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-17T13:45:00Z",
+        "MemberDisplayId": "MZ001240",
+        "FirstName": "มนัสวี",
+        "LastName": "สุขสันต์",
+        "Email": "manaswee@email.com",
+        "Phone": "087-234-5678",
+        "Newsletter": "On",
+        "LineConnected": "No"
+      },
+      {
+        "RegisterDate": "2025-01-16T15:10:00Z",
+        "MemberDisplayId": "MZ001241",
+        "FirstName": "สุรชัย",
+        "LastName": "แกล้วกล้า",
+        "Email": "surachai@email.com",
+        "Phone": "088-345-6789",
+        "Newsletter": "Off",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-15T08:25:00Z",
+        "MemberDisplayId": "MZ001242",
+        "FirstName": "วราภรณ์",
+        "LastName": "สุขเกษม",
+        "Email": "waraporn@email.com",
+        "Phone": "089-456-7890",
+        "Newsletter": "On",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-14T12:40:00Z",
+        "MemberDisplayId": "MZ001243",
+        "FirstName": "ธนากร",
+        "LastName": "มั่งคั่ง",
+        "Email": "thanakorn@email.com",
+        "Phone": "090-567-8901",
+        "Newsletter": "Off",
+        "LineConnected": "No"
+      },
+      {
+        "RegisterDate": "2025-01-13T17:55:00Z",
+        "MemberDisplayId": "MZ001244",
+        "FirstName": "สิริพร",
+        "LastName": "เจริญรุ่ง",
+        "Email": "siriporn@email.com",
+        "Phone": "091-678-9012",
+        "Newsletter": "On",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-12T09:30:00Z",
+        "MemberDisplayId": "MZ001245",
+        "FirstName": "ชัยวัฒน์",
+        "LastName": "ประสบสุข",
+        "Email": "chaiwat@email.com",
+        "Phone": "092-789-0123",
+        "Newsletter": "On",
+        "LineConnected": "No"
+      },
+      {
+        "RegisterDate": "2025-01-11T14:15:00Z",
+        "MemberDisplayId": "MZ001246",
+        "FirstName": "อรุณี",
+        "LastName": "สีเขียว",
+        "Email": "arunee@email.com",
+        "Phone": "093-890-1234",
+        "Newsletter": "Off",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-10T11:50:00Z",
+        "MemberDisplayId": "MZ001247",
+        "FirstName": "ประยูร",
+        "LastName": "มหาชัย",
+        "Email": "prayoon@email.com",
+        "Phone": "094-901-2345",
+        "Newsletter": "On",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-09T16:35:00Z",
+        "MemberDisplayId": "MZ001248",
+        "FirstName": "กมลชนก",
+        "LastName": "รุ่งเรือง",
+        "Email": "kamonchonok@email.com",
+        "Phone": "095-012-3456",
+        "Newsletter": "On",
+        "LineConnected": "No"
+      },
+      {
+        "RegisterDate": "2025-01-08T10:20:00Z",
+        "MemberDisplayId": "MZ001249",
+        "FirstName": "วิทยา",
+        "LastName": "ปัญญาดี",
+        "Email": "witaya@email.com",
+        "Phone": "096-123-4567",
+        "Newsletter": "Off",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-07T13:45:00Z",
+        "MemberDisplayId": "MZ001250",
+        "FirstName": "นันทนา",
+        "LastName": "สุขสวัสดิ์",
+        "Email": "nantana@email.com",
+        "Phone": "097-234-5678",
+        "Newsletter": "On",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-06T15:10:00Z",
+        "MemberDisplayId": "MZ001251",
+        "FirstName": "สุพจน์",
+        "LastName": "เก่งการ",
+        "Email": "supot@email.com",
+        "Phone": "098-345-6789",
+        "Newsletter": "On",
+        "LineConnected": "No"
+      },
+      {
+        "RegisterDate": "2025-01-05T08:25:00Z",
+        "MemberDisplayId": "MZ001252",
+        "FirstName": "จิรายุ",
+        "LastName": "ผจญภัย",
+        "Email": "jirayu@email.com",
+        "Phone": "099-456-7890",
+        "Newsletter": "Off",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-04T12:40:00Z",
+        "MemberDisplayId": "MZ001253",
+        "FirstName": "ธีรพงษ์",
+        "LastName": "ใจรักษ์",
+        "Email": "teerapong@email.com",
+        "Phone": "080-567-8901",
+        "Newsletter": "On",
+        "LineConnected": "Yes"
+      }
+    ]
+  },
+  "noMember": {
+    "data": [
+      {
+        "RegisterDate": "2025-01-23T12:00:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "ประยุทธ์",
+        "LastName": "สมบูรณ์",
+        "Email": "prayuth@email.com",
+        "Phone": "086-789-0123"
+      },
+      {
+        "RegisterDate": "2025-01-22T15:30:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "มาลี",
+        "LastName": "ดีใจ",
+        "Email": "malee@email.com",
+        "Phone": "087-890-1234"
+      },
+      {
+        "RegisterDate": "2025-01-21T11:15:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "สมศักดิ์",
+        "LastName": "เก่งกาจ",
+        "Email": "somsak@email.com",
+        "Phone": "088-901-2345"
+      },
+      {
+        "RegisterDate": "2025-01-20T13:45:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "วันดี",
+        "LastName": "มีสุข",
+        "Email": "wandee@email.com",
+        "Phone": "089-012-3456"
+      },
+      {
+        "RegisterDate": "2025-01-19T10:20:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "ชาญ",
+        "LastName": "ฉลาด",
+        "Email": "chan@email.com",
+        "Phone": "090-123-4567"
+      },
+      {
+        "RegisterDate": "2025-01-18T16:40:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "สุนีย์",
+        "LastName": "แสงใส",
+        "Email": "sunee@email.com",
+        "Phone": "091-234-5678"
+      },
+      {
+        "RegisterDate": "2025-01-17T09:25:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "บุญมี",
+        "LastName": "รวยเงิน",
+        "Email": "boonmee@email.com",
+        "Phone": "092-345-6789"
+      },
+      {
+        "RegisterDate": "2025-01-16T14:50:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "ลักษณา",
+        "LastName": "งามสง่า",
+        "Email": "laksana@email.com",
+        "Phone": "093-456-7890"
+      },
+      {
+        "RegisterDate": "2025-01-15T11:35:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "พิชัย",
+        "LastName": "ชนะใจ",
+        "Email": "pichai@email.com",
+        "Phone": "094-567-8901"
+      },
+      {
+        "RegisterDate": "2025-01-14T17:20:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "สมหญิง",
+        "LastName": "ใจงาม",
+        "Email": "somying@email.com",
+        "Phone": "095-678-9012"
+      },
+      {
+        "RegisterDate": "2025-01-13T08:45:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "วิรัช",
+        "LastName": "กล้าหาญ",
+        "Email": "wirat@email.com",
+        "Phone": "096-789-0123"
+      },
+      {
+        "RegisterDate": "2025-01-12T13:10:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "นิภา",
+        "LastName": "สุขใส",
+        "Email": "nipa@email.com",
+        "Phone": "097-890-1234"
+      },
+      {
+        "RegisterDate": "2025-01-11T15:55:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "ธนา",
+        "LastName": "มั่งมี",
+        "Email": "thana@email.com",
+        "Phone": "098-901-2345"
+      },
+      {
+        "RegisterDate": "2025-01-10T10:30:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "รัตนา",
+        "LastName": "เพชรงาม",
+        "Email": "ratana@email.com",
+        "Phone": "099-012-3456"
+      },
+      {
+        "RegisterDate": "2025-01-09T12:15:00Z",
+        "MemberDisplayId": "",
+        "FirstName": "สมบัติ",
+        "LastName": "ทองคำ",
+        "Email": "sombat@email.com",
+        "Phone": "080-123-4567"
+      }
+    ]
+  },
+  "chartData": {
+    "dailyRegistrations": [
+      { "date": "2025-01-01", "count": 12 },
+      { "date": "2025-01-02", "count": 18 },
+      { "date": "2025-01-03", "count": 15 },
+      { "date": "2025-01-04", "count": 22 },
+      { "date": "2025-01-05", "count": 19 },
+      { "date": "2025-01-06", "count": 25 },
+      { "date": "2025-01-07", "count": 28 },
+      { "date": "2025-01-08", "count": 21 },
+      { "date": "2025-01-09", "count": 24 },
+      { "date": "2025-01-10", "count": 30 },
+      { "date": "2025-01-11", "count": 27 },
+      { "date": "2025-01-12", "count": 33 },
+      { "date": "2025-01-13", "count": 29 },
+      { "date": "2025-01-14", "count": 35 },
+      { "date": "2025-01-15", "count": 31 },
+      { "date": "2025-01-16", "count": 26 },
+      { "date": "2025-01-17", "count": 32 },
+      { "date": "2025-01-18", "count": 28 },
+      { "date": "2025-01-19", "count": 34 },
+      { "date": "2025-01-20", "count": 30 },
+      { "date": "2025-01-21", "count": 37 },
+      { "date": "2025-01-22", "count": 33 },
+      { "date": "2025-01-23", "count": 39 },
+      { "date": "2024-12-01", "count": 20 },
+      { "date": "2024-12-02", "count": 23 },
+      { "date": "2024-12-03", "count": 18 },
+      { "date": "2024-12-04", "count": 25 },
+      { "date": "2024-12-05", "count": 22 },
+      { "date": "2024-12-06", "count": 27 },
+      { "date": "2024-12-07", "count": 24 },
+      { "date": "2024-12-08", "count": 29 },
+      { "date": "2024-12-09", "count": 26 },
+      { "date": "2024-12-10", "count": 31 },
+      { "date": "2024-12-11", "count": 28 },
+      { "date": "2024-12-12", "count": 33 },
+      { "date": "2024-12-13", "count": 30 },
+      { "date": "2024-12-14", "count": 35 },
+      { "date": "2024-12-15", "count": 32 },
+      { "date": "2024-12-16", "count": 37 },
+      { "date": "2024-12-17", "count": 34 },
+      { "date": "2024-12-18", "count": 39 },
+      { "date": "2024-12-19", "count": 36 },
+      { "date": "2024-12-20", "count": 41 },
+      { "date": "2024-12-21", "count": 38 },
+      { "date": "2024-12-22", "count": 43 },
+      { "date": "2024-12-23", "count": 40 },
+      { "date": "2024-12-24", "count": 45 },
+      { "date": "2024-12-25", "count": 42 },
+      { "date": "2024-12-26", "count": 47 },
+      { "date": "2024-12-27", "count": 44 },
+      { "date": "2024-12-28", "count": 49 },
+      { "date": "2024-12-29", "count": 46 },
+      { "date": "2024-12-30", "count": 51 },
+      { "date": "2024-12-31", "count": 48 },
+      { "date": "2024-11-01", "count": 15 },
+      { "date": "2024-11-02", "count": 18 },
+      { "date": "2024-11-03", "count": 16 },
+      { "date": "2024-11-04", "count": 21 },
+      { "date": "2024-11-05", "count": 19 },
+      { "date": "2024-11-06", "count": 23 },
+      { "date": "2024-11-07", "count": 20 },
+      { "date": "2024-11-08", "count": 25 },
+      { "date": "2024-11-09", "count": 22 },
+      { "date": "2024-11-10", "count": 27 },
+      { "date": "2024-11-11", "count": 24 },
+      { "date": "2024-11-12", "count": 29 },
+      { "date": "2024-11-13", "count": 26 },
+      { "date": "2024-11-14", "count": 31 },
+      { "date": "2024-11-15", "count": 28 },
+      { "date": "2024-11-16", "count": 33 },
+      { "date": "2024-11-17", "count": 30 },
+      { "date": "2024-11-18", "count": 35 },
+      { "date": "2024-11-19", "count": 32 },
+      { "date": "2024-11-20", "count": 37 },
+      { "date": "2024-11-21", "count": 34 },
+      { "date": "2024-11-22", "count": 39 },
+      { "date": "2024-11-23", "count": 36 },
+      { "date": "2024-11-24", "count": 41 },
+      { "date": "2024-11-25", "count": 38 },
+      { "date": "2024-11-26", "count": 43 },
+      { "date": "2024-11-27", "count": 40 },
+      { "date": "2024-11-28", "count": 45 },
+      { "date": "2024-11-29", "count": 42 },
+      { "date": "2024-11-30", "count": 47 }
+    ]
+  },
+  "filters": {
+    "zones": ["Central", "Northern", "Eastern", "Southern", "Western"],
+    "dealers": [
+      { "name": "Mazda Bangkok", "code": "MBK001", "zone": "Central" },
+      { "name": "Mazda Siam Paragon", "code": "MSP006", "zone": "Central" },
+      { "name": "Mazda Ladprao", "code": "MLP011", "zone": "Central" },
+      { "name": "Mazda Ramkhamhaeng", "code": "MRK016", "zone": "Central" },
+      { "name": "Mazda Chiang Mai", "code": "MCM002", "zone": "Northern" },
+      { "name": "Mazda Chiang Rai", "code": "MCR007", "zone": "Northern" },
+      { "name": "Mazda Lampang", "code": "MLP012", "zone": "Northern" },
+      { "name": "Mazda Phitsanulok", "code": "MPS017", "zone": "Northern" },
+      { "name": "Mazda Pattaya", "code": "MPT003", "zone": "Eastern" },
+      { "name": "Mazda Rayong", "code": "MRY008", "zone": "Eastern" },
+      { "name": "Mazda Chonburi", "code": "MCB013", "zone": "Eastern" },
+      { "name": "Mazda Trat", "code": "MTR018", "zone": "Eastern" },
+      { "name": "Mazda Phuket", "code": "MPK004", "zone": "Southern" },
+      { "name": "Mazda Hat Yai", "code": "MHY009", "zone": "Southern" },
+      { "name": "Mazda Surat Thani", "code": "MST014", "zone": "Southern" },
+      { "name": "Mazda Krabi", "code": "MKR019", "zone": "Southern" },
+      { "name": "Mazda Kanchanaburi", "code": "MKB005", "zone": "Western" },
+      { "name": "Mazda Ratchaburi", "code": "MRC010", "zone": "Western" },
+      { "name": "Mazda Phetchaburi", "code": "MPB015", "zone": "Western" },
+      { "name": "Mazda Prachuap Khiri Khan", "code": "MPK020", "zone": "Western" }
+    ],
+    "models": ["CX-5", "Mazda3", "CX-30", "CX-9", "MX-5", "Mazda6", "CX-60", "Mazda2", "BT-50", "CX-8", "MX-30", "CX-90"],
+    "exteriorColors": [
+      "Soul Red Crystal",
+      "Machine Gray Metallic", 
+      "Snowflake White Pearl",
+      "Deep Crystal Blue",
+      "Jet Black Mica",
+      "Polymetal Gray Metallic",
+      "Ceramic Metallic",
+      "Zircon Sand Metallic",
+      "Eternal Blue Mica",
+      "Arctic White",
+      "Sonic Silver Metallic",
+      "Titanium Flash Mica",
+      "Meteor Gray Mica",
+      "Rhodium White Premium Metallic",
+      "Crystal White Pearl Mica",
+      "Artisan Red Premium",
+      "Platinum Quartz Metallic",
+      "Magma Red Metallic",
+      "Brilliant Black"
+    ],
+    "interiorOptions": [
+      "Black Leather",
+      "Parchment Leather",
+      "Black Cloth",
+      "Tan Leather",
+      "Red Leather",
+      "Gray Cloth",
+      "White Leather",
+      "Burgundy Leather",
+      "Beige Cloth",
+      "Gray Leather",
+      "Charcoal Cloth",
+      "Brown Leather",
+      "Ivory Leather",
+      "Nappa Leather Black",
+      "Terracotta Leather",
+      "Caturra Brown Nappa Leather",
+      "Pure White Leather",
+      "Ebony Leather",
+      "Stone Leather",
+      "Garnet Red Leather"
+    ],
+    "packages": [
+      "Standard Package",
+      "Premium Package", 
+      "Sport Package",
+      "Luxury Package",
+      "Signature Package"
+    ]
+  }
+}

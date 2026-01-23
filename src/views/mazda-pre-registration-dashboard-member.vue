@@ -29,21 +29,58 @@ import KPImember from '@/components/Dashboard/KPImember.vue'
 
 import domtoimage from 'dom-to-image';
 
-
-const API_BASE = import.meta.env.VITE_API_URL
-const API_KEY = import.meta.env.VITE_BEARER_TOKEN
-const ENDPOINT_PREBOOKINGS = '/member-info'
 const todayStr = () => dayjs().format('YYYY-MM-DD')
 const startOfYearStr = (d = dayjs()) => d.startOf('year').format('YYYY-MM-DD')
 
-
-const api = axios.create({ baseURL: API_BASE })
-api.interceptors.request.use((config) => {
-  if (!config.method) config.method = 'get'
-  config.headers = config.headers || {}
-  if (API_KEY) config.headers.Authorization = `Bearer ${API_KEY}`
-  return config
-})
+// Static mock data
+const mockData = {
+  memberInfo: {
+    total: {
+      "2024-10": 45,
+      "2024-11": 67,
+      "2024-12": 89,
+      "2025-01": 123
+    },
+    lineConnected: {
+      "2024-10": 32,
+      "2024-11": 48,
+      "2024-12": 65,
+      "2025-01": 87
+    },
+    data: [
+      {
+        "RegisterDate": "2025-01-15T08:30:00Z",
+        "MemberDisplayId": "MZ001234",
+        "FirstName": "สมชาย",
+        "LastName": "ใจดี",
+        "Email": "somchai@email.com",
+        "Phone": "081-234-5678",
+        "Newsletter": "On",
+        "LineConnected": "Yes"
+      },
+      {
+        "RegisterDate": "2025-01-14T10:15:00Z",
+        "MemberDisplayId": "MZ001235",
+        "FirstName": "สุดา",
+        "LastName": "รักดี",
+        "Email": "suda@email.com",
+        "Phone": "082-345-6789",
+        "Newsletter": "Off",
+        "LineConnected": "No"
+      },
+      {
+        "RegisterDate": "2025-01-13T14:20:00Z",
+        "MemberDisplayId": "MZ001236",
+        "FirstName": "วิชัย",
+        "LastName": "มั่นคง",
+        "Email": "wichai@email.com",
+        "Phone": "083-456-7890",
+        "Newsletter": "On",
+        "LineConnected": "Yes"
+      }
+    ]
+  }
+};
 
 /* ---------- helpers ที่ยังใช้ ---------- */
 function monthFromKey(k) {
@@ -185,28 +222,16 @@ export default {
 
     async function fetchPrebookings({ startOverride, endOverride } = {}) {
       try {
-        if (!API_BASE) throw new Error('VITE_API_URL is not set')
+        // Simulate API delay
+        await new Promise(resolve => setTimeout(resolve, 500))
 
-        let start = startOverride
-          ?? (filters.value.start && dayjs(filters.value.start).isValid()
-            ? dayjs(filters.value.start).format('YYYY-MM-DD')
-            : startOfYearStr())
-        let end = endOverride
-          ?? (filters.value.end && dayjs(filters.value.end).isValid()
-            ? dayjs(filters.value.end).format('YYYY-MM-DD')
-            : todayStr())
-
-        if (dayjs(start).isSame(dayjs(end), 'day')) {
-          end = dayjs(end).add(1, 'day').format('YYYY-MM-DD')
-        }
-
-        const res = await api.get(ENDPOINT_PREBOOKINGS, { params: { start, end } })
-
-        if (res?.data && typeof res.data === 'object'
-          && res.data.total && res.data.lineConnected) {
+        // Use static mock data
+        const mockResponse = mockData.memberInfo
+        if (mockResponse && typeof mockResponse === 'object'
+          && mockResponse.total && mockResponse.lineConnected) {
           // === metrics mode ===
-          totalsByMonthFromApi.value = res.data.total || {}
-          lineConnectedByMonthFromApi.value = res.data.lineConnected || {}
+          totalsByMonthFromApi.value = mockResponse.total || {}
+          lineConnectedByMonthFromApi.value = mockResponse.lineConnected || {}
           raw.value = []
 
           const fromTotals = rangeFromMetrics(totalsByMonthFromApi.value)
@@ -229,7 +254,7 @@ export default {
 
         } else {
           // === list mode ===
-          const arr = isArrayPayload(res?.data) ? extractArray(res.data) : []
+          const arr = mockResponse.data || []
           const normalized = arr.map(mapApiRecord)
           raw.value = normalized
 
@@ -267,9 +292,7 @@ export default {
 
       } catch (e) {
         console.group('%c[API] Fetch ERROR', 'color:#d32f2f;font-weight:700')
-        if (e?.response) console.error('HTTP Error:', e.response.status, e.response.data)
-        else if (e?.request) console.error('Network/CORS Error. No response received.', e.message)
-        else console.error('Client Error:', e.message)
+        console.error('Mock Data Error:', e.message)
         console.groupEnd()
         error.value = e?.message || 'Fetch failed'
       } finally {
