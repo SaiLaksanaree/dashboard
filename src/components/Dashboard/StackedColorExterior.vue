@@ -75,7 +75,7 @@ const option = computed(() => {
     tooltip: {
       trigger: 'item',
       triggerOn: 'mousemove',
-      position: (point, params, dom, rect, size) => {
+      position: (_, __, dom, ___, size) => {
         // ใช้ตำแหน่งของ tooltip ให้แสดงที่ขวาบน
         return [size.viewSize[0] - dom.offsetWidth, 10] // ขวาบน
       },

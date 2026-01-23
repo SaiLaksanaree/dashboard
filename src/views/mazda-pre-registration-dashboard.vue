@@ -41,8 +41,8 @@
 
         <div class="grid three-cols">
           <PackagePie :items="pkgPie" />
-          <StackedColorExterior :categories="extColorCats" :series="extColorSeries" :autoHover="!isCapturing" />
-          <StackedColorInterior :categories="intColorCats" :series="intColorSeries" :autoHover="!isCapturing" />
+          <StackedColorExterior :categories="extColorCatsWithOthers" :series="extColorSeries" :autoHover="!isCapturing" />
+          <StackedColorInterior :categories="intColorCatsWithOthers" :series="intColorSeries" :autoHover="!isCapturing" />
         </div>
 
       </div>
@@ -183,37 +183,7 @@ const mockData = {
           }
         ]
       },
-      {
-        "ID": "PRE004",
-        "BookingCreated": "2025-01-22T16:45:00Z",
-        "memberDisplayId": "MZ001237",
-        "Newsletter": "On",
-        "ZoneSale": "Southern",
-        "Dealer": "Mazda Phuket",
-        "DealerCode": "MPK004",
-        "Color": "Deep Crystal Blue",
-        "InteriorOption": "Tan Leather",
-        "PackageName": "Luxury Package",
-        "Model": "CX-9",
-        "Grade": "2.5 Turbo AWD Signature",
-        "Status": "Confirmed",
-        "Title": "Test Drive Booking",
-        "Subtitle": "CX-9 Luxury Experience",
-        "Detail": "Full luxury package with premium amenities",
-        "associatedPerson": {
-          "firstName": "นิรันดร์",
-          "lastName": "สุขใส",
-          "email": "niran@email.com",
-          "phone": "084-567-8901"
-        },
-        "packagedetail": [
-          {
-            "Title": "Luxury Package",
-            "Subtitle": "Ultimate Comfort",
-            "Detail": "Premium leather, advanced safety, and luxury amenities"
-          }
-        ]
-      },
+   
       {
         "ID": "PRE005",
         "BookingCreated": "2025-01-21T11:30:00Z",
@@ -974,18 +944,55 @@ const options = computed(() => {
     })
 
     // -------- Stacked Exterior/InteriorOption --------
-    const extColorCats = computed(() => uniq(filtered.value.map(r => r.exteriorColor || 'Unknown')).sort())
-    const intColorCats = computed(() => uniq(filtered.value.map(r => r.InteriorOption || 'Unknown')).sort())
+    // Helper function to limit colors to top 5 and group others
+    function limitColorsToTop5(records, colorKey) {
+      const colorCounts = {}
+      records.forEach(r => {
+        const color = r[colorKey] || 'Unknown'
+        colorCounts[color] = (colorCounts[color] || 0) + 1
+      })
+      
+      // Sort colors by count (descending) and take top 5
+      const sortedColors = Object.entries(colorCounts)
+        .sort(([,a], [,b]) => b - a)
+        .slice(0, 5)
+        .map(([color]) => color)
+      
+      return sortedColors.sort() // Sort alphabetically for consistent display
+    }
+
+    const extColorCats = computed(() => limitColorsToTop5(filtered.value, 'exteriorColor'))
+    const intColorCats = computed(() => limitColorsToTop5(filtered.value, 'InteriorOption'))
 
     function buildStackSeries(records, colorKey, colors) {
       const byModel = groupBy(records, r => (r.model && r.model.trim()) ? r.model : 'All Models')
       const series = Object.entries(byModel).map(([model, items]) => {
-        const counts = colors.map(c => items.filter(it => (it[colorKey] || 'Unknown') === c).length)
+        const counts = colors.map(c => {
+          return items.filter(it => {
+            const itemColor = it[colorKey] || 'Unknown'
+            return itemColor === c
+          }).length
+        })
+        
+ 
+        
         return { name: model, data: counts }
       })
       series.sort((a, b) => b.data.reduce((s, v) => s + v, 0) - a.data.reduce((s, v) => s + v, 0))
       return series
     }
+
+    const extColorCatsWithOthers = computed(() => {
+      const allColors = uniq(filtered.value.map(r => r.exteriorColor || 'Unknown'))
+      const hasOthers = allColors.length > 5
+      return hasOthers ? [...extColorCats.value] : extColorCats.value
+    })
+
+    const intColorCatsWithOthers = computed(() => {
+      const allColors = uniq(filtered.value.map(r => r.InteriorOption || 'Unknown'))
+      const hasOthers = allColors.length > 5
+      return hasOthers ? [...intColorCats.value] : intColorCats.value
+    })
 
     const extColorSeries = computed(() => buildStackSeries(filtered.value, 'exteriorColor', extColorCats.value))
     const intColorSeries = computed(() => buildStackSeries(filtered.value, 'InteriorOption', intColorCats.value))
@@ -1094,8 +1101,8 @@ const options = computed(() => {
  
        // computed data
        filtered, monthSeries,
-       extColorCats, extColorSeries,
-       intColorCats, intColorSeries,
+       extColorCats, extColorSeries, extColorCatsWithOthers,
+       intColorCats, intColorSeries, intColorCatsWithOthers,
        byDealer, byZone, pkgPie,
  
        // table
