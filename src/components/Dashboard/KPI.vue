@@ -11,7 +11,7 @@
       <div class="info-card">
         <div class="card-item">
           <div class="label">ยินยอมรับข่าวสาร ​<br>
-            e-Newsletter ของ Mazda6e</div>
+            e-Newsletter ของ</div>
           <div class="badge">{{ newsletterOn }}</div>
         </div>
         <a> **ยินยอมใน pre-registration flow เท่านั้น​</a>

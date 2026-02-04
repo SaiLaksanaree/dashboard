@@ -23,7 +23,7 @@
               หมายเลขการจอง <span v-if="sort.key === 'bookingNo'">{{ sort.dir === 'asc' ? '▲' : '▼' }}</span>
             </th>
             <th :class="thClass('memberDisplayId')" @click="onSort('memberDisplayId')">
-              Mazda ID <span v-if="sort.key === 'memberDisplayId'">{{ sort.dir === 'asc' ? '▲' : '▼' }}</span>
+               ID <span v-if="sort.key === 'memberDisplayId'">{{ sort.dir === 'asc' ? '▲' : '▼' }}</span>
             </th>
             <th :class="thClass('firstName')" @click="onSort('firstName')">
               ชื่อ <span v-if="sort.key === 'firstName'">{{ sort.dir === 'asc' ? '▲' : '▼' }}</span>
@@ -32,7 +32,7 @@
               นามสกุล <span v-if="sort.key === 'lastName'">{{ sort.dir === 'asc' ? '▲' : '▼' }}</span>
             </th>
             <th :class="thClass('Newsletter')" @click="onSort('Newsletter')">
-              ยินยอมรับข่าวสาร Mazda6e <span v-if="sort.key === 'Newsletter'">{{ sort.dir === 'asc' ? '▲' : '▼' }}</span>
+              ยินยอมรับข่าวสาร <span v-if="sort.key === 'Newsletter'">{{ sort.dir === 'asc' ? '▲' : '▼' }}</span>
             </th>
             <th style="width:120px">รายละเอียด</th>
           </tr>
@@ -130,7 +130,7 @@ function onExport() {
     { key: 'bookingDate', label: 'วันที่จอง' },
     { key: 'bookingTime', label: 'เวลาที่จอง' },
     { key: 'bookingNo', label: 'หมายเลขการจอง' },
-    { key: 'memberDisplayId', label: 'Mazda ID' },
+    { key: 'memberDisplayId', label: 'ID' },
     { key: 'firstName', label: 'ชื่อ' },
     { key: 'lastName', label: 'นามสกุล' },
     { key: 'email', label: 'อีเมล' },

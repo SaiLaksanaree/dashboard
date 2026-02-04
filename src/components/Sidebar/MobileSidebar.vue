@@ -10,7 +10,7 @@
       <router-link :to="{ name: 'testdrive' }">
         <img
         style="max-width: 68%;"
-          src="@/assets/images/logo/logo_mazda.png"
+          src="@/assets/images/logo/dashboard-icon.jpg"
           alt=""
           v-if="!this.$store.themeSettingsStore.isDark"
         />

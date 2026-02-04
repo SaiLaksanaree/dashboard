@@ -31,8 +31,8 @@
         }" :current-page.sync="current">
         <template v-slot:table-row="props">
           <!-- <span v-if="props.column.field == 'title'">{{ props.row.title }} </span> -->
-          <span v-if="props.column.field == 'mazdaOwner'">
-            {{ props.row.mazdaOwner === 1 ? "ใช่" : (props.row.mazdaOwner != 1 ? "ไม่ใช่" :
+          <span v-if="props.column.field == 'memberOwner'">
+            {{ props.row.memberOwner === 1 ? "ใช่" : (props.row.memberOwner != 1 ? "ไม่ใช่" :
               props.row.needToTestDrive) }}
           </span>
           <span v-if="props.column.field == 'firstName'">{{ props.row.firstName }}</span>
@@ -299,7 +299,7 @@ export default {
       searchTerm: "",
       columns: [
         // { label: "คำนำหน้า", field: "title", width: "100px" },
-        { label: "เป็นเจ้าของรถมาสด้า", field: "mazdaOwner", width: "200px" },
+        { label: "เป็นเจ้าของรถมาสด้า", field: "memberOwner", width: "200px" },
         { label: "ชื่อ", field: "firstname", width: "150px" },
         { label: "นามสกุล", field: "lastname", width: "150px" },
         // { label: "เพศ", field: "sex", width: "80px" },
@@ -494,7 +494,7 @@ export default {
       }
       const exportData = data.map((item) => ({
         // คำนำหน้า: item.title,
-        เป็นเจ้าของรถมาสด้า: item.mazdaOwner == 1 ? 'ใช่' : 'ไม่ใช่',
+        เป็นเจ้าของรถมาสด้า: item.memberOwner == 1 ? 'ใช่' : 'ไม่ใช่',
         ชื่อ: item.firstname,
         นามสกุล: item.lastname,
         // เพศ: item.title == 'นาย' ? 'ชาย' : 'หญิง',

@@ -83,8 +83,8 @@
 </template>
 <script>
 import ForgotPass from "./common/forgot";
-import logoMsBg from "@/assets/images/logo/mazda_cms_bg.jpg"
-import logoMobile from "@/assets/images/logo/logo_mazda.png"
+import logoMsBg from "@/assets/images/logo/bg-blur.jpg"
+import logoMobile from "@/assets/images/logo/dashboard-icon.jpg"
 
 export default {
   components: {
@@ -96,7 +96,7 @@ export default {
 </script>
 <style lang="scss">
 .left-column {
-  background-image: url('@/assets/images/logo/mazda_cms_bg.jpg');
+  background-image: url('@/assets/images/logo/bg-blur.jpg');
   background-size: cover;
   background-position: center;
   height: 100%;

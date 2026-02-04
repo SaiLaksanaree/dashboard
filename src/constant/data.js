@@ -56,7 +56,7 @@ export const menuItems = [
 
   // {
   //   isHeadr: true,
-  //   title: "Mazda Cx-5",
+  //   title: "Cx-5",
   // },
   // {
   //   title: "Preregister Lead Form",
@@ -90,38 +90,38 @@ export const menuItems = [
 
   {
     isHeadr: true,
-    title: "MAZDA6 NEW LANDING PAGE",
+    title: " NEW LANDING PAGE",
   },
   // {
   //   title: "Preregister Lead Form",
   //   icon: "heroicons:arrow-trending-up",
-  //   link: "register-mazda6-new-landing-page",
-  //   params: "mazda6-new-landing-page",
+  //   link: "register-new-landing-page",
+  //   params: "new-landing-page",
   // },
   // {
   //   title: "CRM Dashbaord",
   //   icon: "heroicons-outline:view-boards",
-  //   link: "dashboard-mazda6-new-landing-page",
-  //   params: "mazda6-new-landing-page",
+  //   link: "dashboard-new-landing-page",
+  //   params: "new-landing-page",
   // },
     {
-    title: "Mazda-Pre-Registration-Dashboard",
+    title: "Pre-Registration-Dashboard",
     icon: "heroicons-outline:view-boards",
-    link: "mazda-pre-registration-dashboard",
-    // params: "mazda-pre-registration-dashboard",
+    link: "pre-registration-dashboard",
+    // params: "pre-registration-dashboard",
   },
   {
-    title: "Mazda-Pre-Registration-Dashboard-member",
+    title: "Pre-Registration-Dashboard-member",
     icon: "heroicons-outline:view-boards",
-    link: "mazda-pre-registration-dashboard-member",
-    // params: "mazda-pre-registration-dashboard-member",
+    link: "pre-registration-dashboard-member",
+    // params: "pre-registration-dashboard-member",
   },
   
   {
-    title: "Mazda-Pre-Registration-Dashboard-member-no-booking",
+    title: "Pre-Registration-Dashboard-member-no-booking",
     icon: "heroicons-outline:view-boards",
-    link: "mazda-pre-registration-dashboard-member-no-booking",
-    // params: "mazda-pre-registration-dashboard-member-no-booking",
+    link: "pre-registration-dashboard-member-no-booking",
+    // params: "pre-registration-dashboard-member-no-booking",
   },
   // {
   //   isHeadr: true,

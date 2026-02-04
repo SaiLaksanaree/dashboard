@@ -25,7 +25,7 @@
         `"
       >
         <router-link
-          :to="{ name: 'testdrive' }"
+          
           v-if="
             !this.$store.themeSettingsStore.sidebarCollasp ||
             this.$store.themeSettingsStore.isMouseHovered
@@ -33,7 +33,7 @@
         >
           <img
             style="max-width: 68%;"
-            src="@/assets/images/logo/logo_mazda.png"
+            src="@/assets/images/logo/dashboard-icon.jpg"
             alt=""
             v-if="!this.$store.themeSettingsStore.isDark && !this.$store.themeSettingsStore.semidark"
           />
@@ -45,7 +45,7 @@
           />
         </router-link>
         <router-link
-          :to="{ name: 'testdrive' }"
+          
           v-if="
             this.$store.themeSettingsStore.sidebarCollasp &&
             !this.$store.themeSettingsStore.isMouseHovered

@@ -1,9 +1,9 @@
-<!-- mazda-pre-registration-dashboard-member.vue -->
+<!-- pre-registration-dashboard-member.vue -->
 <template>
   <div class="wrapper" ref="wrapperRef" :class="{ 'capture-mode': isCapturing }">
     <div class="container grid">
       <div class="header-row">
-        <h5 class="header-title">Mazda Sales Thailand</h5>
+        <h5 class="header-title">Sales Thailand</h5>
         <div class="btn-capture" @click="exportJpg">Export Graph</div>
       </div>
 
@@ -41,7 +41,7 @@ const mockData = {
       // October 2024
       {
         RegisterDate: '2024-10-15T08:30:00Z',
-        MemberDisplayId: 'MZ001001',
+        MemberDisplayId: '001001',
         FirstName: 'สมชาย',
         LastName: 'ใจดี',
         Email: 'somchai@email.com',
@@ -51,7 +51,7 @@ const mockData = {
       },
       {
         RegisterDate: '2024-10-20T10:15:00Z',
-        MemberDisplayId: 'MZ001002',
+        MemberDisplayId: '001002',
         FirstName: 'สุดา',
         LastName: 'รักดี',
         Email: 'suda@email.com',
@@ -62,7 +62,7 @@ const mockData = {
       // November 2024
       {
         RegisterDate: '2024-11-05T14:20:00Z',
-        MemberDisplayId: 'MZ001003',
+        MemberDisplayId: '001003',
         FirstName: 'วิชัย',
         LastName: 'มั่นคง',
         Email: 'wichai@email.com',
@@ -72,7 +72,7 @@ const mockData = {
       },
       {
         RegisterDate: '2024-11-12T09:45:00Z',
-        MemberDisplayId: 'MZ001004',
+        MemberDisplayId: '001004',
         FirstName: 'นิรันดร์',
         LastName: 'สุขใส',
         Email: 'niran@email.com',
@@ -82,7 +82,7 @@ const mockData = {
       },
       {
         RegisterDate: '2024-11-25T16:30:00Z',
-        MemberDisplayId: 'MZ001005',
+        MemberDisplayId: '001005',
         FirstName: 'อนุชา',
         LastName: 'เจริญ',
         Email: 'anucha@email.com',
@@ -93,7 +93,7 @@ const mockData = {
       // December 2024
       {
         RegisterDate: '2024-12-03T11:20:00Z',
-        MemberDisplayId: 'MZ001006',
+        MemberDisplayId: '001006',
         FirstName: 'ปรีชา',
         LastName: 'วิทยากร',
         Email: 'preecha@email.com',
@@ -103,7 +103,7 @@ const mockData = {
       },
       {
         RegisterDate: '2024-12-15T13:45:00Z',
-        MemberDisplayId: 'MZ001007',
+        MemberDisplayId: '001007',
         FirstName: 'มนัสวี',
         LastName: 'สุขสันต์',
         Email: 'manaswee@email.com',
@@ -113,7 +113,7 @@ const mockData = {
       },
       {
         RegisterDate: '2024-12-28T15:10:00Z',
-        MemberDisplayId: 'MZ001008',
+        MemberDisplayId: '001008',
         FirstName: 'สุรชัย',
         LastName: 'แกล้วกล้า',
         Email: 'surachai@email.com',
@@ -124,7 +124,7 @@ const mockData = {
       // January 2025
       {
         RegisterDate: '2025-01-05T08:15:00Z',
-        MemberDisplayId: 'MZ001009',
+        MemberDisplayId: '001009',
         FirstName: 'วราภรณ์',
         LastName: 'สุขเกษม',
         Email: 'waraporn@email.com',
@@ -134,7 +134,7 @@ const mockData = {
       },
       {
         RegisterDate: '2025-01-12T10:30:00Z',
-        MemberDisplayId: 'MZ001010',
+        MemberDisplayId: '001010',
         FirstName: 'ธนากร',
         LastName: 'มั่งคั่ง',
         Email: 'thanakorn@email.com',
@@ -144,7 +144,7 @@ const mockData = {
       },
       {
         RegisterDate: '2025-01-18T14:45:00Z',
-        MemberDisplayId: 'MZ001011',
+        MemberDisplayId: '001011',
         FirstName: 'สิริพร',
         LastName: 'เจริญรุ่ง',
         Email: 'siriporn@email.com',
@@ -154,7 +154,7 @@ const mockData = {
       },
       {
         RegisterDate: '2025-01-22T16:20:00Z',
-        MemberDisplayId: 'MZ001012',
+        MemberDisplayId: '001012',
         FirstName: 'ชัยวัฒน์',
         LastName: 'ประสบสุข',
         Email: 'chaiwat@email.com',

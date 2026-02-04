@@ -3,7 +3,7 @@
   <Modal :open="open" @close="$emit('close')">
     <div class="section-title">
       <div style="color:#c53030;">
-        Mazda ID {{ view.mazdaId || '-' }}
+        ID {{ view.memberID || '-' }}
       </div>
     </div>
 
@@ -13,8 +13,8 @@
 
     <div class="section-title">ข้อมูลสมาชิก</div>
     <div class="kv">
-      <div class="k">Mazda ID:</div>
-      <div class="v">{{ view.mazdaId || '-' }}</div>
+      <div class="k">ID:</div>
+      <div class="v">{{ view.memberID || '-' }}</div>
 
       <div class="k">ชื่อ:</div>
       <div class="v">{{ view.firstName || '-' }}</div>
@@ -53,7 +53,7 @@ export default {
     view() {
       const r = this.record || {}
       return {
-        mazdaId: r.MemberDisplayId ?? r.memberDisplayId ?? r.mazdaId ?? r.MemberID ?? '',
+        memberID: r.MemberDisplayId ?? r.memberDisplayId ?? r.memberID ?? r.MemberID ?? '',
         registeredAt: r.RegisterDate ?? r.registerDate ?? r.bookingAt ?? r.createdAt ?? null,
         firstName: r.FirstName ?? r.firstName ?? '',
         lastName: r.LastName ?? r.lastName ?? '',

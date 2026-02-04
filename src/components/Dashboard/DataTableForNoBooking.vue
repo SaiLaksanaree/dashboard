@@ -17,7 +17,7 @@
               เวลาที่สมัคร <span v-if="sort.key === 'RegisterTime'">{{ sort.dir === 'asc' ? '▲' : '▼' }}</span>
             </th>
             <th :class="thClass('MemberDisplayId')" @click="onSort('MemberDisplayId')">
-              Mazda ID <span v-if="sort.key === 'MemberDisplayId'">{{ sort.dir === 'asc' ? '▲' : '▼' }}</span>
+              ID <span v-if="sort.key === 'MemberDisplayId'">{{ sort.dir === 'asc' ? '▲' : '▼' }}</span>
             </th>
             <th :class="thClass('FirstName')" @click="onSort('FirstName')">
               ชื่อ <span v-if="sort.key === 'FirstName'">{{ sort.dir === 'asc' ? '▲' : '▼' }}</span>
@@ -143,7 +143,7 @@ function onExport() {
   const headers = [
     { key: 'registerDate', label: 'วันที่สมัคร' },
     { key: 'registerTime', label: 'เวลาที่สมัคร' },
-    { key: 'memberDisplayId', label: 'Mazda ID' },
+    { key: 'memberDisplayId', label: 'ID' },
     { key: 'firstName', label: 'ชื่อ' },
     { key: 'lastName', label: 'นามสกุล' },
     { key: 'email', label: 'อีเมล' },

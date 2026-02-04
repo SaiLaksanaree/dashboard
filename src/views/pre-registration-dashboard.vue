@@ -1,11 +1,11 @@
 
-<!-- mazda-pre-registration-dashboard -->
+<!-- pre-registration-dashboard -->
 <template>
   <div class="wrapper">
     <div class="container grid">
       <div ref="wrapperRef" :class="{ 'capture-mode': isCapturing }" style="padding: 16px;">
         <div class="header-row">
-          <h5 class="header-title">Mazda Sales Thailand</h5>
+          <h5 class="header-title"> Sales Thailand</h5>
           <div style="margin-left:auto; display:flex; gap:8px; align-items:center;">
             <select v-model="exportFormat" class="btn-capture" aria-label="Export format">
               <option value="jpeg">JPEG</option>
@@ -19,8 +19,8 @@
         <Filters :options="options" v-model="filters" />
 
         <div class="grid two-cols">
-          <!-- <KPI :total="filtered.length" :months="monthSeries" :status-mazda6e="filtered" /> -->
-          <KPI :total="filtered.length" :months="monthSeries" :status-mazda6e="filtered"
+          <!-- <KPI :total="filtered.length" :months="monthSeries" :status="filtered" /> -->
+          <KPI :total="filtered.length" :months="monthSeries" :status="filtered"
             :newsletter-on="newsletterOnCount" :autoHover="!isCapturing" />
           <ChartData
             v-if="filters.from && filters.to"
@@ -93,10 +93,10 @@ const mockData = {
       {
         "ID": "PRE001",
         "BookingCreated": "2025-01-23T10:30:00Z",
-        "memberDisplayId": "MZ001234",
+        "memberDisplayId": "001234",
         "Newsletter": "On",
         "ZoneSale": "Central",
-        "Dealer": "Mazda Bangkok",
+        "Dealer": " Bangkok",
         "DealerCode": "MBK001",
         "Color": "Soul Red Crystal",
         "InteriorOption": "Black Leather",
@@ -124,19 +124,19 @@ const mockData = {
       {
         "ID": "PRE002",
         "BookingCreated": "2025-01-23T14:20:00Z",
-        "memberDisplayId": "MZ001235",
+        "memberDisplayId": "001235",
         "Newsletter": "Off",
         "ZoneSale": "Northern",
-        "Dealer": "Mazda Chiang Mai",
+        "Dealer": " Chiang Mai",
         "DealerCode": "MCM002",
         "Color": "Machine Gray Metallic",
         "InteriorOption": "Parchment Leather",
         "PackageName": "Standard Package",
-        "Model": "Mazda3",
+        "Model": "BT-50",
         "Grade": "2.0 SP Hatchback",
         "Status": "Pending",
         "Title": "Test Drive Booking",
-        "Subtitle": "Mazda3 Standard Experience",
+        "Subtitle": "BT-50 Standard Experience",
         "Detail": "Standard test drive package",
         "associatedPerson": {
           "firstName": "สุดา",
@@ -155,10 +155,10 @@ const mockData = {
       {
         "ID": "PRE003",
         "BookingCreated": "2025-01-22T09:15:00Z",
-        "memberDisplayId": "MZ001236",
+        "memberDisplayId": "001236",
         "Newsletter": "On",
         "ZoneSale": "Eastern",
-        "Dealer": "Mazda Pattaya",
+        "Dealer": " Pattaya",
         "DealerCode": "MPT003",
         "Color": "Snowflake White Pearl",
         "InteriorOption": "Black Cloth",
@@ -187,10 +187,10 @@ const mockData = {
       {
         "ID": "PRE005",
         "BookingCreated": "2025-01-21T11:30:00Z",
-        "memberDisplayId": "MZ001238",
+        "memberDisplayId": "001238",
         "Newsletter": "Off",
         "ZoneSale": "Western",
-        "Dealer": "Mazda Kanchanaburi",
+        "Dealer": " Kanchanaburi",
         "DealerCode": "MKB005",
         "Color": "Jet Black Mica",
         "InteriorOption": "Red Leather",
@@ -218,10 +218,10 @@ const mockData = {
       {
         "ID": "PRE006",
         "BookingCreated": "2025-01-21T08:45:00Z",
-        "memberDisplayId": "MZ001239",
+        "memberDisplayId": "001239",
         "Newsletter": "On",
         "ZoneSale": "Central",
-        "Dealer": "Mazda Siam Paragon",
+        "Dealer": " Siam Paragon",
         "DealerCode": "MSP006",
         "Color": "Polymetal Gray Metallic",
         "InteriorOption": "White Leather",
@@ -249,19 +249,19 @@ const mockData = {
       {
         "ID": "PRE007",
         "BookingCreated": "2025-01-20T15:20:00Z",
-        "memberDisplayId": "MZ001240",
+        "memberDisplayId": "001240",
         "Newsletter": "Off",
         "ZoneSale": "Northern",
-        "Dealer": "Mazda Chiang Rai",
+        "Dealer": " Chiang Rai",
         "DealerCode": "MCR007",
         "Color": "Ceramic Metallic",
         "InteriorOption": "Burgundy Leather",
         "PackageName": "Sport Package",
-        "Model": "Mazda2",
+        "Model": "BT-502",
         "Grade": "1.3 Sports High Connect",
         "Status": "Pending",
         "Title": "Test Drive Booking",
-        "Subtitle": "Mazda2 Compact Experience",
+        "Subtitle": "BT-502 Compact Experience",
         "Detail": "Efficient and stylish city driving experience",
         "associatedPerson": {
           "firstName": "มนัสวี",
@@ -280,10 +280,10 @@ const mockData = {
       {
         "ID": "PRE008",
         "BookingCreated": "2025-01-20T12:10:00Z",
-        "memberDisplayId": "MZ001241",
+        "memberDisplayId": "001241",
         "Newsletter": "On",
         "ZoneSale": "Eastern",
-        "Dealer": "Mazda Rayong",
+        "Dealer": " Rayong",
         "DealerCode": "MRY008",
         "Color": "Zircon Sand Metallic",
         "InteriorOption": "Beige Cloth",
@@ -311,10 +311,10 @@ const mockData = {
       {
         "ID": "PRE009",
         "BookingCreated": "2025-01-19T17:30:00Z",
-        "memberDisplayId": "MZ001242",
+        "memberDisplayId": "001242",
         "Newsletter": "On",
         "ZoneSale": "Southern",
-        "Dealer": "Mazda Hat Yai",
+        "Dealer": " Hat Yai",
         "DealerCode": "MHY009",
         "Color": "Eternal Blue Mica",
         "InteriorOption": "Gray Leather",
@@ -342,19 +342,19 @@ const mockData = {
       {
         "ID": "PRE010",
         "BookingCreated": "2025-01-19T13:45:00Z",
-        "memberDisplayId": "MZ001243",
+        "memberDisplayId": "001243",
         "Newsletter": "Off",
         "ZoneSale": "Western",
-        "Dealer": "Mazda Ratchaburi",
+        "Dealer": " Ratchaburi",
         "DealerCode": "MRC010",
         "Color": "Arctic White",
         "InteriorOption": "Charcoal Cloth",
         "PackageName": "Standard Package",
-        "Model": "Mazda3",
+        "Model": "BT-50",
         "Grade": "2.0 C Sedan",
         "Status": "Pending",
         "Title": "Test Drive Booking",
-        "Subtitle": "Mazda3 Sedan Experience",
+        "Subtitle": "BT-50 Sedan Experience",
         "Detail": "Elegant sedan with premium design",
         "associatedPerson": {
           "firstName": "ธนากร",
@@ -373,10 +373,10 @@ const mockData = {
       {
         "ID": "PRE011",
         "BookingCreated": "2025-01-18T09:20:00Z",
-        "memberDisplayId": "MZ001244",
+        "memberDisplayId": "001244",
         "Newsletter": "On",
         "ZoneSale": "Central",
-        "Dealer": "Mazda Ladprao",
+        "Dealer": " Ladprao",
         "DealerCode": "MLP011",
         "Color": "Sonic Silver Metallic",
         "InteriorOption": "Black Leather",
@@ -404,10 +404,10 @@ const mockData = {
       {
         "ID": "PRE012",
         "BookingCreated": "2025-01-18T14:15:00Z",
-        "memberDisplayId": "MZ001245",
+        "memberDisplayId": "001245",
         "Newsletter": "On",
         "ZoneSale": "Northern",
-        "Dealer": "Mazda Lampang",
+        "Dealer": " Lampang",
         "DealerCode": "MLP012",
         "Color": "Titanium Flash Mica",
         "InteriorOption": "Brown Leather",
@@ -435,10 +435,10 @@ const mockData = {
       {
         "ID": "PRE013",
         "BookingCreated": "2025-01-17T11:40:00Z",
-        "memberDisplayId": "MZ001246",
+        "memberDisplayId": "001246",
         "Newsletter": "Off",
         "ZoneSale": "Eastern",
-        "Dealer": "Mazda Chonburi",
+        "Dealer": " Chonburi",
         "DealerCode": "MCB013",
         "Color": "Meteor Gray Mica",
         "InteriorOption": "Ivory Leather",
@@ -466,10 +466,10 @@ const mockData = {
       {
         "ID": "PRE014",
         "BookingCreated": "2025-01-17T16:25:00Z",
-        "memberDisplayId": "MZ001247",
+        "memberDisplayId": "001247",
         "Newsletter": "On",
         "ZoneSale": "Southern",
-        "Dealer": "Mazda Surat Thani",
+        "Dealer": " Surat Thani",
         "DealerCode": "MST014",
         "Color": "Rhodium White Premium Metallic",
         "InteriorOption": "Nappa Leather Black",
@@ -497,19 +497,19 @@ const mockData = {
       {
         "ID": "PRE015",
         "BookingCreated": "2025-01-16T10:50:00Z",
-        "memberDisplayId": "MZ001248",
+        "memberDisplayId": "001248",
         "Newsletter": "On",
         "ZoneSale": "Western",
-        "Dealer": "Mazda Phetchaburi",
+        "Dealer": " Phetchaburi",
         "DealerCode": "MPB015",
         "Color": "Crystal White Pearl Mica",
         "InteriorOption": "Terracotta Leather",
         "PackageName": "Premium Package",
-        "Model": "Mazda6",
+        "Model": "BT-506",
         "Grade": "2.5 Turbo Signature",
         "Status": "Confirmed",
         "Title": "Test Drive Booking",
-        "Subtitle": "Mazda6 Executive Experience",
+        "Subtitle": "BT-506 Executive Experience",
         "Detail": "Executive sedan with turbocharged performance",
         "associatedPerson": {
           "firstName": "กมลชนก",
@@ -528,10 +528,10 @@ const mockData = {
       {
         "ID": "PRE016",
         "BookingCreated": "2025-01-16T15:35:00Z",
-        "memberDisplayId": "MZ001249",
+        "memberDisplayId": "001249",
         "Newsletter": "Off",
         "ZoneSale": "Central",
-        "Dealer": "Mazda Ramkhamhaeng",
+        "Dealer": " Ramkhamhaeng",
         "DealerCode": "MRK016",
         "Color": "Artisan Red Premium",
         "InteriorOption": "Caturra Brown Nappa Leather",
@@ -559,19 +559,19 @@ const mockData = {
       {
         "ID": "PRE017",
         "BookingCreated": "2025-01-15T12:20:00Z",
-        "memberDisplayId": "MZ001250",
+        "memberDisplayId": "001250",
         "Newsletter": "On",
         "ZoneSale": "Northern",
-        "Dealer": "Mazda Phitsanulok",
+        "Dealer": " Phitsanulok",
         "DealerCode": "MPS017",
         "Color": "Platinum Quartz Metallic",
         "InteriorOption": "Pure White Leather",
         "PackageName": "Sport Package",
-        "Model": "Mazda3",
+        "Model": "BT-50",
         "Grade": "2.0 Turbo Hatchback",
         "Status": "Confirmed",
         "Title": "Test Drive Booking",
-        "Subtitle": "Mazda3 Turbo Experience",
+        "Subtitle": "BT-50 Turbo Experience",
         "Detail": "High-performance turbocharged hatchback",
         "associatedPerson": {
           "firstName": "นันทนา",
@@ -590,10 +590,10 @@ const mockData = {
       {
         "ID": "PRE018",
         "BookingCreated": "2025-01-15T08:10:00Z",
-        "memberDisplayId": "MZ001251",
+        "memberDisplayId": "001251",
         "Newsletter": "On",
         "ZoneSale": "Eastern",
-        "Dealer": "Mazda Trat",
+        "Dealer": " Trat",
         "DealerCode": "MTR018",
         "Color": "Magma Red Metallic",
         "InteriorOption": "Ebony Leather",
@@ -603,7 +603,7 @@ const mockData = {
         "Status": "Confirmed",
         "Title": "Test Drive Booking",
         "Subtitle": "CX-30 Essential Experience",
-        "Detail": "Essential features with Mazda quality",
+        "Detail": "Essential features with  quality",
         "associatedPerson": {
           "firstName": "สุพจน์",
           "lastName": "เก่งการ",
@@ -614,17 +614,17 @@ const mockData = {
           {
             "Title": "Standard Package",
             "Subtitle": "Essential Quality",
-            "Detail": "Core Mazda experience with essential features"
+            "Detail": "Core  experience with essential features"
           }
         ]
       },
       {
         "ID": "PRE019",
         "BookingCreated": "2025-01-14T19:45:00Z",
-        "memberDisplayId": "MZ001252",
+        "memberDisplayId": "001252",
         "Newsletter": "Off",
         "ZoneSale": "Southern",
-        "Dealer": "Mazda Krabi",
+        "Dealer": " Krabi",
         "DealerCode": "MKR019",
         "Color": "Snowflake White Pearl",
         "InteriorOption": "Stone Leather",
@@ -652,10 +652,10 @@ const mockData = {
       {
         "ID": "PRE020",
         "BookingCreated": "2025-01-14T07:30:00Z",
-        "memberDisplayId": "MZ001253",
+        "memberDisplayId": "001253",
         "Newsletter": "On",
         "ZoneSale": "Western",
-        "Dealer": "Mazda Prachuap Khiri Khan",
+        "Dealer": " Prachuap Khiri Khan",
         "DealerCode": "MPK020",
         "Color": "Brilliant Black",
         "InteriorOption": "Garnet Red Leather",
@@ -1064,7 +1064,7 @@ const options = computed(() => {
       const data = sorted.value.map(r => ({
         'วันเวลาที่จอง': formatDateTime(r.bookingAt),
         'หมายเลขการจอง': r.bookingNo,
-        'Mazda ID': r.memberDisplayId,
+        ' ID': r.memberDisplayId,
         'ชื่อ': r.firstName,
         'นามสกุล': r.lastName,
         'อีเมล': r.email,

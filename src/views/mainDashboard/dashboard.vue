@@ -38,15 +38,15 @@
           </Card>
         </div>
         <div class="lg:col-span-4 col-span-12 space-y-5">
-          <Card title="Mazda Owner">
+          <Card title=" Owner">
             <!-- <template #header>
                 <SelectMonth />
               </template> -->
             <div class="legend-ring3">
               <apexchart type="pie" height="335" :options="this.$store.themeSettingsStore.isDark
-                ? pieChartDark.chartMazdaOwner
-                : this.chartMazdaOwner
-                " :series="this.chartMazdaOwner.series" />
+                ? pieChartDark.chartmemberOwner
+                : this.chartmemberOwner
+                " :series="this.chartmemberOwner.series" />
             </div>
           </Card>
           <Card title="trends calcultation">
@@ -111,7 +111,7 @@ export default {
       urlEnv: import.meta.env.VITE_APP_API_URL,
 
       totalMembers: 0,
-      mazdaOwner: 0,
+      memberOwner: 0,
       needToTestDrive: 0,
       couponCodeCount: 0,
       stacked,
@@ -132,7 +132,7 @@ export default {
         },
         {
           title: "เป็นเจ้าของรถมาสด้า",
-          count: this.mazdaOwner,
+          count: this.memberOwner,
           bg: "bg-info-500",
           text: "text-primary-500",
           percent: "8.67%",
@@ -171,14 +171,14 @@ export default {
         },
         {
           name: "เป็นเจ้าของรถมาสด้า",
-          count: this.mazdaOwner,
+          count: this.memberOwner,
         },
         {
           name: "สนใจทดลองขับ",
           count: this.needToTestDrive,
         },
       ],
-      chartMazdaOwner: {
+      chartmemberOwner: {
         series: [0, 0], // Initial values, will be updated in mounted()
         labels: ["เป็นเจ้าของรถมาสด้า", "สมัครสมาชิกทั้งหมด"],
         dataLabels: {
@@ -390,11 +390,11 @@ export default {
         // Set counts for display
         this.totalRows = this.leadDataAll.length;
         this.totalMembers = this.leadDataAll.length;
-        this.mazdaOwner = this.leadDataAll.filter(item => item.mazdaOwner === 1).length;
+        this.memberOwner = this.leadDataAll.filter(item => item.memberOwner === 1).length;
         this.needToTestDrive = this.leadDataAll.filter(item => item.needToTestDrive === 1).length;
 
         console.log('totalMembers', this.totalMembers);
-        console.log('mazdaOwner', this.mazdaOwner);
+        console.log('memberOwner', this.memberOwner);
         console.log('needToTestDrive', this.needToTestDrive);
 
         // Update chart series dynamically after data is fetched
@@ -408,7 +408,7 @@ export default {
     this.fetchLeadData().then(() => {
       // Update statistics and campaigns after fetching data
       this.statistics[0].count = this.totalMembers;
-      this.statistics[1].count = this.mazdaOwner;
+      this.statistics[1].count = this.memberOwner;
       this.statistics[2].count = this.needToTestDrive;
 
 
@@ -422,7 +422,7 @@ export default {
         },
         {
           name: "เป็นเจ้าของรถมาสด้า",
-          count: this.mazdaOwner,
+          count: this.memberOwner,
         },
         {
           name: "สนใจทดลองขับ",
@@ -431,14 +431,14 @@ export default {
       ];
 
       // Update pie chart data as well
-      this.chartMazdaOwner.series = [
+      this.chartmemberOwner.series = [
         this.totalMembers,
-        this.mazdaOwner,
+        this.memberOwner,
       ];
 
       this.chartOptions.series = [
         this.totalMembers,
-        this.mazdaOwner,
+        this.memberOwner,
         this.needToTestDrive,
         // this.couponCodeCount,
       ];

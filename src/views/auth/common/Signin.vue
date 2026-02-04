@@ -54,7 +54,7 @@ const mockData = {
       success: {
         data: {
           id: "user123",
-          email: "admin@mazda.com",
+          email: "admin",
           firstName: "Admin",
           lastName: "User",
           role: "admin",
@@ -107,7 +107,7 @@ const onSubmit = handleSubmit(async (values) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const validCredentials = [
-      { email: "admin@mazda.com", password: "admin123" },
+      { email: "admin@mail.com", password: "admin123" },
     ];
 
     const isValidLogin = validCredentials.some(
@@ -125,7 +125,7 @@ const onSubmit = handleSubmit(async (values) => {
         })
       );
 
-      router.push("/app/mazda-pre-registration-dashboard");
+      router.push("/app/pre-registration-dashboard");
       toast.success("Login successfully", { timeout: 2000 });
     } else {
       toast.error(mockData.auth.login.error.message || "Invalid credentials", {

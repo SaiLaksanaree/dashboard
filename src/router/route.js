@@ -145,22 +145,22 @@ const routes = [
         component: () => import("@/views/testdriv-cx5.vue"),
       },
       {
-        path: "mazda-pre-registration-dashboard",
-        name: "mazda-pre-registration-dashboard",
-        component: () => import("@/views/mazda-pre-registration-dashboard.vue"),
+        path: "pre-registration-dashboard",
+        name: "pre-registration-dashboard",
+        component: () => import("@/views/pre-registration-dashboard.vue"),
       },
       {
-        path: "mazda-pre-registration-dashboard-member",
-        name: "mazda-pre-registration-dashboard-member",
+        path: "pre-registration-dashboard-member",
+        name: "pre-registration-dashboard-member",
         component: () =>
-          import("@/views/mazda-pre-registration-dashboard-member.vue"),
+          import("@/views/pre-registration-dashboard-member.vue"),
       },
       {
-        path: "mazda-pre-registration-dashboard-member-no-booking",
-        name: "mazda-pre-registration-dashboard-member-no-booking",
+        path: "pre-registration-dashboard-member-no-booking",
+        name: "pre-registration-dashboard-member-no-booking",
         component: () =>
           import(
-            "@/views/mazda-pre-registration-dashboard-member-no-booking.vue"
+            "@/views/pre-registration-dashboard-member-no-booking.vue"
           ),
       },
       {
@@ -169,14 +169,14 @@ const routes = [
         component: () => import("@/views/RE-SPARK-YOUR-JOY.vue"),
       },
       {
-        path: "register-mazda6-new-landing-page",
-        name: "register-mazda6-new-landing-page",
-        component: () => import("@/views/mazda6/register.vue"),
+        path: "register-new-landing-page",
+        name: "register-new-landing-page",
+        component: () => import("@/views/mainDashboard/register.vue"),
       },
       {
-        path: "dashboard-mazda6-new-landing-page",
-        name: "dashboard-mazda6-new-landing-page",
-        component: () => import("@/views/mazda6/dashboard.vue"),
+        path: "dashboard-new-landing-page",
+        name: "dashboard-new-landing-page",
+        component: () => import("@/views/mainDashboard/dashboard.vue"),
       },
 
       // components

@@ -12,7 +12,7 @@
 
     <div class="section-title">ข้อมูลผู้ทำการจองสิทธิ์เสนอพิเศษ</div>
     <div class="kv">
-      <div class="k">Mazda ID:</div>
+      <div class="k">ID:</div>
       <div class="v">{{ record.memberDisplayId || '-' }}</div>
       <div class="k">ชื่อ:</div>
       <div class="v">{{ record.firstName }}</div>
@@ -24,7 +24,7 @@
       <div class="k">เบอร์โทร:</div>
       <div class="v"><a v-if="record.phone" :href="'tel:' + record.phone">{{ record.phone }}</a><span v-else>-</span>
       </div>
-      <div class="k">ยินยอมรับข่าวสาร Mazda6e:</div>
+      <div class="k">ยินยอมรับข่าวสาร :</div>
       <div class="v">
         {{ (record.Newsletter || '').toString().toLowerCase() === 'on'
           ? 'Yes'
@@ -38,7 +38,7 @@
 
     <hr class="divider" />
 
-    <div class="section-title">แบบสอบถามความสนใจรถ {{ record.model || 'MAZDA6e' }}</div>
+    <div class="section-title">แบบสอบถามความสนใจรถ {{ record.model || '' }}</div>
     <div class="kv two">
       <div class="k">รุ่นรถที่คุณสนใจ</div>
       <div class="v">{{ record.range }}</div>

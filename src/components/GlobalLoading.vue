@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import loadingGif from '@/assets/images/imgForDashbord/Mazda-SKJ_loading.gif'
+import loadingGif from '@/assets/images/imgForDashbord/amalie-steiness.gif'
 
 export default {
   name: 'GlobalLoading',

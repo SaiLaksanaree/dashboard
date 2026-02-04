@@ -1,10 +1,10 @@
-<!-- mazda-pre-registration-dashboard-member-no-booking.vue -->
+<!-- pre-registration-dashboard-member-no-booking.vue -->
 
 <template>
   <div class="wrapper" ref="wrapperRef" :class="{ 'capture-mode': isCapturing }">
     <div class="container grid">
       <div class="header-row">
-        <h5 class="header-title">Mazda Sales Thailand</h5>
+        <h5 class="header-title"> Sales Thailand</h5>
         <!-- <div class="btn-capture" @click="exportJpg">Export Graph</div> -->
       </div>
       <h4>Member no booking</h4>
@@ -338,7 +338,7 @@ export default {
     function exportExcel() {
       const data = sorted.value.map(r => ({
         'วันเวลาที่สมัคร': formatDateTime(r.RegisterDate),
-        'Mazda ID': r.MemberDisplayId,
+        ' ID': r.MemberDisplayId,
         'ชื่อ': r.FirstName,
         'นามสกุล': r.LastName,
         'อีเมล': r.Email || '',

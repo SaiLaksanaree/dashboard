@@ -40,8 +40,8 @@ import Social from "../common/Social";
 // Image Import
 import logoWhite from "@/assets/images/logo/logo-white.svg"
 import logo from "@/assets/images/logo/logo.svg"
-import logoMsBg from "@/assets/images/logo/mazda_cms_bg.jpg"
-import logoMobile from "@/assets/images/logo/logo_mazda.png"
+import logoMsBg from "@/assets/images/logo/bg-blur.jpg"
+import logoMobile from "@/assets/images/logo/dashboard-icon.jpg"
 import sideImg from "@/assets/images/auth/ils1.svg"
 
 export default {
@@ -63,7 +63,7 @@ export default {
 
 <style lang="scss">
 .left-column {
-  background-image: url('@/assets/images/logo/mazda_cms_bg.jpg');
+  background-image: url('@/assets/images/logo/bg-blur.jpg');
   background-size: cover;
   background-position: center;
   height: 100%;
