@@ -20,15 +20,8 @@ export default {
 </script>
 
 <style>
-@font-face {
-  font-family: 'MazdaTypeTH';
-  src: url('@/assets/fonts/MazdaTypeTH-Regular.woff2') format('woff2'),
-    url('@/assets/fonts/MazdaTypeTH-Regular.woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
-  font-family: 'MazdaTypeTH', sans-serif;
+  font-family: Tahoma, Arial, sans-serif;
 }
 </style>
+
