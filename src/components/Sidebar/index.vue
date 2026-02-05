@@ -25,14 +25,14 @@
         `"
       >
         <router-link
-          
+            to="/"
           v-if="
             !this.$store.themeSettingsStore.sidebarCollasp ||
             this.$store.themeSettingsStore.isMouseHovered
           "
         >
           <img
-            style="max-width: 68%;"
+            style="max-width: 20%;"
             src="@/assets/images/logo/dashboard-icon.jpg"
             alt=""
             v-if="!this.$store.themeSettingsStore.isDark && !this.$store.themeSettingsStore.semidark"
@@ -45,7 +45,7 @@
           />
         </router-link>
         <router-link
-          
+            to="/"
           v-if="
             this.$store.themeSettingsStore.sidebarCollasp &&
             !this.$store.themeSettingsStore.isMouseHovered
